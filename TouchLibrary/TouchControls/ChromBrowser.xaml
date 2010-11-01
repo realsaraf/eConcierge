@@ -1,0 +1,15 @@
+﻿<Abstract:AnimatableControl x:Class="TouchControls.ChromBrowser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Abstract="clr-namespace:CustomControls.Abstract;assembly=CustomControls" mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <StackPanel>
+        <Canvas Name="CanvasContainer">
+            <Canvas Name="BrowserContainer">
+            </Canvas>
+            <!--      <Ellipse Name="MenuButton" Height="80" Width="80" StrokeThickness="5" Stroke="WhiteSmoke"  Fill="Black" Canvas.Left="-40" Canvas.Top="-40"/>
+        <Label Content="Close" FontSize="18" Foreground="White" Height="31" Margin="13,0,0,26" Name="Menutext" Width="58" Canvas.Left="-40" Canvas.Top="-17" />-->
+        </Canvas>
+    </StackPanel>
+</Abstract:AnimatableControl>

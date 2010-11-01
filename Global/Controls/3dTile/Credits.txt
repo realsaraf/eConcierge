@@ -1,0 +1,3 @@
+Code Source: http://work.j832.com/2008/03/bag-o-tricks-march-edition.html
+Author: Kevin Moore
+License: MIT/GPL

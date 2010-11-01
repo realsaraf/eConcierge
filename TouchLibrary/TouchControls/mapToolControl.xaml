@@ -1,0 +1,44 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:Helpers_Converters="clr-namespace:Helpers.Converters;assembly=Helpers"
+	mc:Ignorable="d"
+	x:Class="TouchControls.MapToolControl"
+	x:Name="UserControl"
+	d:DesignWidth="300" d:DesignHeight="300" Width="300">
+
+	<UserControl.Resources>
+		<Helpers_Converters:HalfValueConverter x:Key="HalfValueConverter"/>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Grid HorizontalAlignment="Left" Width="110" VerticalAlignment="Bottom" Height="110" Margin="0,0,0,-50">
+			<Path Data="M67.406773,11.625392 C313.37332,-24.113833 274.9999,26.999591 265.50014,79.499709 L55.5,76.499964" Fill="#FF858585" HorizontalAlignment="Right" Margin="0,-0.292,-164.411,29.5" Stretch="Fill" Stroke="#FF494949" StrokeThickness="1" Width="218.911"/>
+			<Ellipse Fill="#FF858585" Stroke="#FF474747" StrokeThickness="0.5" Margin="0" VerticalAlignment="Center" Height="110" Width="110"/>
+			<Image HorizontalAlignment="Center" Height="59" Source="Images\setsSurceButton.png" Stretch="Fill" VerticalAlignment="Top" Width="55" RenderTransformOrigin="0.5,0.5">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="49"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+		</Grid>
+		<Grid x:Name="grid" Margin="0" Width="300" VerticalAlignment="Bottom">
+			<TextBlock TextWrapping="Wrap" Text="Get Directions" RenderTransformOrigin="0.5,0.5" Height="35" Foreground="#FF2B2B2B" TextAlignment="Center" FontSize="16" VerticalAlignment="Bottom" Margin="119,0,0,10" HorizontalAlignment="Left" FontWeight="Bold">
+				<TextBlock.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</TextBlock.RenderTransform>
+			</TextBlock>
+		</Grid>
+	</Grid>
+</UserControl>

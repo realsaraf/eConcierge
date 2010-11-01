@@ -1,0 +1,13 @@
+﻿<Page 
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Microsoft.Samples.KMoore.WPFSamples.FlipTile3D" xmlns:_3dTile="clr-namespace:_3dTile" Title="3D Tile"
+			>
+	<Page.Background>
+		<LinearGradientBrush EndPoint="0,0.5" StartPoint="0,0.95">
+			<GradientStop Color="#F999" Offset="0"/>
+			<GradientStop Color="#FFFFFFFF" Offset="1"/>
+		</LinearGradientBrush>
+	</Page.Background>
+	<_3dTile:FlipTile3D Width="500" Height="500"/>
+</Page>

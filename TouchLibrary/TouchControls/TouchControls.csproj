@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9540245-BBB6-4D42-8204-1553777ABF0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TouchControls</RootNamespace>
+    <AssemblyName>TouchControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20421.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cjc.AwesomiumWrapper, Version=1.0.3681.1368, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Cjc.AwesomiumWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Cjc.ChromiumBrowser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Cjc.ChromiumBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="InfoStrat.VE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a464bcc72081fceb, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\InfoStrat.VE.dll</HintPath>
+    </Reference>
+    <Reference Include="InfoStrat.VE.NUI">
+      <HintPath>..\..\Lib\InfoStrat.VE.NUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TwiPLi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\TwiPLi.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCategories.xaml.cs">
+      <DependentUpon>AppCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChromBrowser.xaml.cs">
+      <DependentUpon>ChromBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlHandlers\ButtonHandler.cs" />
+    <Compile Include="ControlHandlers\CheckBoxHandler.cs" />
+    <Compile Include="ControlHandlers\BookHandler.cs" />
+    <Compile Include="ControlHandlers\BrowserHandler.cs" />
+    <Compile Include="ControlHandlers\AppCategoriesHandler.cs" />
+    <Compile Include="ControlHandlers\AppDataHandler.cs" />
+    <Compile Include="ControlHandlers\AccomPhotoHandler.cs" />
+    <Compile Include="ControlHandlers\CircularCloseButtonControlHandler.cs" />
+    <Compile Include="ControlHandlers\ClosePictureControlHandler.cs" />
+    <Compile Include="ControlHandlers\ChromiumBrowserHandler.cs" />
+    <Compile Include="ControlHandlers\ComboBoxHandler.cs" />
+    <Compile Include="ControlHandlers\CircularToggleButtonHandler.cs" />
+    <Compile Include="ControlHandlers\LandmarkItemHandler.cs" />
+    <Compile Include="ControlHandlers\IPhoneScrollViewerHandler.cs" />
+    <Compile Include="ControlHandlers\DayItemHandler.cs" />
+    <Compile Include="ControlHandlers\LocationRadioButtonHandler.cs" />
+    <Compile Include="ControlHandlers\MapBrowserHandler.cs" />
+    <Compile Include="ControlHandlers\ScrollViewerHandler.cs" />
+    <Compile Include="ControlHandlers\TouchButtonHandler.cs" />
+    <Compile Include="ControlHandlers\TouchRadioButtonHandler.cs" />
+    <Compile Include="ControlHandlers\HotelExplorerHandler.cs" />
+    <Compile Include="ControlHandlers\HotelVideoControlHandler.cs" />
+    <Compile Include="ControlHandlers\KeyboardHandler.cs" />
+    <Compile Include="ControlHandlers\FlipTile3DHandler.cs" />
+    <Compile Include="ControlHandlers\LoginFormHandler.cs" />
+    <Compile Include="ControlHandlers\MapControlHandler.cs" />
+    <Compile Include="ControlHandlers\MTouchMessageBoxHandler.cs" />
+    <Compile Include="ControlHandlers\PhotoHandler.cs" />
+    <Compile Include="ControlHandlers\PictureControlHandler.cs" />
+    <Compile Include="ControlHandlers\RssListHandler.cs" />
+    <Compile Include="ControlHandlers\ToggleButtonHandler.cs" />
+    <Compile Include="ControlHandlers\TrackBarHandler.cs" />
+    <Compile Include="ControlHandlers\VideoControlHandler.cs" />
+    <Compile Include="ControlHandlers\ElementHandler.cs" />
+    <Compile Include="ControlHandlers\ListBoxHandler.cs" />
+    <Compile Include="ControlHandlers\SliderHandler.cs" />
+    <Compile Include="ControlHandlers\TextBoxHandler.cs" />
+    <Compile Include="AppData.xaml.cs">
+      <DependentUpon>AppData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlHandlers\WebBrowserHandler.cs" />
+    <Compile Include="MapBrowser.xaml.cs">
+      <DependentUpon>MapBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Effects\IMeshEffect.cs" />
+    <Compile Include="Effects\LineEvaluator.cs" />
+    <Compile Include="Effects\MeshCreator.cs" />
+    <Compile Include="LoginForm.xaml.cs">
+      <DependentUpon>LoginForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MTouchMessageBox.xaml.cs">
+      <DependentUpon>MTouchMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Photo.xaml.cs">
+      <DependentUpon>Photo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Effects\RectangularMeshFiller.cs" />
+    <Compile Include="RssList.xaml.cs">
+      <DependentUpon>RssList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Effects\WaterRippleEffect.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CustomControls\CustomControls.csproj">
+      <Project>{BBACA5C4-D30A-4115-8160-345DFA99791F}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Global\Controls\3dTile\3dTile.csproj">
+      <Project>{7EB07DEA-D7AB-41C2-A05F-751E52CDA070}</Project>
+      <Name>3dTile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Global\Controls\WpfKeyboard\WpfKb\WpfKb.csproj">
+      <Project>{0784CDC9-0F52-4B8B-9488-6589C11E94E2}</Project>
+      <Name>WpfKb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Global\Controls\WPFMitsuControls\WPFMitsuControls.csproj">
+      <Project>{DBC99C0E-F918-4E3B-B154-C03E212D8ACA}</Project>
+      <Name>WPFMitsuControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Global\Helpers\Helpers\Helpers.csproj">
+      <Project>{250698D5-1429-4CAF-BEB6-3D06AA67C97E}</Project>
+      <Name>Helpers %28Global\Helpers\Helpers%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrasturcture\Infrasturcture.csproj">
+      <Project>{05B85A9F-E135-4441-AB26-8ACE5BA44A88}</Project>
+      <Name>Infrasturcture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TouchHelpers\TouchHelpers.csproj">
+      <Project>{DE517DE0-ABE1-4CC3-AD62-92E4AF10A5EB}</Project>
+      <Name>TouchHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Awesomium.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="COPYING.LESSER.txt" />
+    <Content Include="COPYING.txt" />
+    <Content Include="icudt38.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\blueTooth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\close.png" />
+    <Content Include="images\copy.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\email.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\menuButton.png" />
+    <Resource Include="images\menuButtonPressed.png" />
+    <Content Include="images\print.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\textToPhone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\weather\icon9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\getDirectionButton.png" />
+    <Resource Include="images\lockButtonImage.png" />
+    <Resource Include="images\lockButtonLocked.png" />
+    <Resource Include="images\CircularMenuCheckedToggleButton.png" />
+    <Resource Include="images\CircularMenuUnCheckedToggleButton.png" />
+    <Resource Include="images\searchBarImage.png" />
+    <Resource Include="images\searchButton.png" />
+    <Resource Include="images\setDestinationButton.png" />
+    <Resource Include="images\setsSurceButton.png" />
+    <Resource Include="play.png" />
+    <Resource Include="hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AppCategories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChromBrowser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MapBrowser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MTouchMessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Photo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RssList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

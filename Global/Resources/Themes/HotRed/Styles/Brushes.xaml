@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ImageBrush x:Key="MainWindowBackgroundBrush" ImageSource="..\Images\bg.jpg" />
+    <LinearGradientBrush x:Key="DockToolBGBrush1" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#AA450303" Offset="0.096"/>
+        <GradientStop Color="#B1010000" Offset="1"/>
+        <GradientStop Color="#97200909" Offset="0.819"/>
+        <GradientStop Color="#E9430101" Offset="0.044"/>
+        <GradientStop Color="#8A350909" Offset="0.98"/>
+        <GradientStop Color="#963B1515" Offset="0.418"/>
+        <GradientStop Color="#614F2626" Offset="0.241"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DockToolBGBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#AA251B1B" Offset="0.113"/>
+        <GradientStop Color="#B1010000" Offset="1"/>
+        <GradientStop Color="#970D0606" Offset="0.819"/>
+        <GradientStop Color="#9E171414" Offset="0.029"/>
+        <GradientStop Color="#8A050101" Offset="0.98"/>
+        <GradientStop Color="#96170F0F" Offset="0.689"/>
+        <GradientStop Color="#61463232" Offset="0.219"/>
+    </LinearGradientBrush>
+	
+	<ControlTemplate x:Key="MenuButtonControlTemplate" TargetType="{x:Type Button}">
+			<Border BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="8" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+				<!--<Border.Effect>
+					<DropShadowEffect ShadowDepth="0" BlurRadius="41"/>
+				</Border.Effect>-->
+				<Border.BorderBrush>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF2F2F01" Offset="0"/>
+						<GradientStop Color="#FFFCFC9D" Offset="0.551"/>
+					</LinearGradientBrush>
+				</Border.BorderBrush>
+				<Border.Background>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFA7A900" Offset="0"/>
+						<GradientStop Color="#FFFFFFA2" Offset="1"/>
+					</LinearGradientBrush>
+				</Border.Background>
+				<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8"/>
+			</Border>
+		</ControlTemplate>
+</ResourceDictionary>

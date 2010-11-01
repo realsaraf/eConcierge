@@ -1,0 +1,59 @@
+﻿<Abstract:AnimatableControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:InheritedFrameworkControls="clr-namespace:CustomControls.InheritedFrameworkControls" 
+             xmlns:Abstract="clr-namespace:CustomControls.Abstract" xmlns:Helpers_Converters="clr-namespace:Helpers.Converters;assembly=Helpers" xmlns:CircularButton="clr-namespace:CustomControls.CircularButton" x:Name="animatableControl" x:Class="CustomControls.HotelExplorer"
+             mc:Ignorable="d"
+             Width="716" Height="468">
+    <Abstract:AnimatableControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        	<Helpers_Converters:HalfValueConverter x:Key="HalfValueConverter"/>
+        	<Helpers_Converters:SubtractValueConverter x:Key="SubtractValueConverter"/>
+        	<Helpers_Converters:MultiplyValueConverter x:Key="MultiplyValueConverter"/>
+            <ImageBrush x:Key="ExplorerInfoControlBgBrush" ImageSource="Images/HotelExterior.jpg" Opacity="0.585"/>
+        </ResourceDictionary>
+    </Abstract:AnimatableControl.Resources>
+    <Abstract:AnimatableControl.RenderTransform>
+        <ScaleTransform />
+    </Abstract:AnimatableControl.RenderTransform>
+  <Grid>
+    <Border x:Name="OuterRim" Background="White" CornerRadius="40" BorderBrush="#FFC19914" BorderThickness="0" Width="{Binding ActualWidth, ElementName=animatableControl, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=animatableControl, Mode=OneWay}">
+        <Border x:Name="Perimeter" Background="{DynamicResource ExplorerInfoControlBgBrush}" CornerRadius="40" Width="{Binding ActualWidth, ConverterParameter=5, Converter={StaticResource SubtractValueConverter}, ElementName=animatableControl, Mode=OneWay}" Height="{Binding ActualHeight, ConverterParameter=5, Converter={StaticResource SubtractValueConverter}, ElementName=animatableControl, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        	<StackPanel x:Name="stackPanel" Orientation="Vertical" Height="{Binding ActualHeight, ConverterParameter=0.86, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}" VerticalAlignment="Top" Margin="{Binding ActualWidth, ConverterParameter=0.06193, Converter={StaticResource MultiplyValueConverter}, ElementName=Description, Mode=OneWay}" HorizontalAlignment="Left">            	
+                <StackPanel Margin="0,0,0,20" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <TextBlock Text="EXPLORE THE VEGAS HILTON" TextWrapping="Wrap" Foreground="#FF480E0F" FontSize="{Binding ActualWidth, ConverterParameter=0.048, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,14,0,0" FontFamily="Leelawadee"/>
+                    </StackPanel>
+                    <Rectangle Fill="#FF480E0F" Stroke="Black" Height="3" Width="{Binding ActualWidth, ConverterParameter=0.743, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Orientation="Horizontal" >
+                	<Border Margin="0,0,25,0" BorderBrush="Black" BorderThickness="1" Background="#DF410000" VerticalAlignment="Top" Height="{Binding ActualHeight, ConverterParameter=0.69, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}" Width="{Binding ActualWidth, ConverterParameter=0.45, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}">                    	
+                		<TextBlock x:Name="Description" HorizontalAlignment="Left" Margin="20.127,20.127,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ConverterParameter=0.39, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}" FontSize="{Binding ActualWidth, ConverterParameter=0.02755, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}" Foreground="White" Text="This section will help you find out more about the Las Vegas Hilton Resort. Take a virtual walkthrough guided by Paris Hilton herself, browse the many accomodations we have available, explore the hotel map, or view some classic photos of the Hilton." TextWrapping="Wrap"/>
+                	</Border>
+
+                	<StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                		<StackPanel.RenderTransform>
+                			<TransformGroup>
+                				<ScaleTransform ScaleX="{Binding ActualWidth, ConverterParameter=0.0013422819, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}" ScaleY="{Binding ActualHeight, ConverterParameter=0.0021367522, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}"/>
+                				<SkewTransform/>
+                				<RotateTransform/>
+                				<TranslateTransform/>
+                			</TransformGroup>
+                		</StackPanel.RenderTransform>                    	
+                		<InheritedFrameworkControls:TouchRadioButton x:Name="TourVideo" Tag="TourVideo" Style="{DynamicResource OptionButtonTemplate}" Height="60" GroupName="MainOptions" Content="Tour Video" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="{Binding ActualHeight, ConverterParameter=0.015, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}"/>
+                		<InheritedFrameworkControls:TouchRadioButton x:Name="Accomodations" Tag="Accomodations" Style="{DynamicResource OptionButtonTemplate}" Height="60" GroupName="MainOptions" Content="Accomodations" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="{Binding ActualHeight, ConverterParameter=0.015, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}"/>
+                		<InheritedFrameworkControls:TouchRadioButton x:Name="HotelMap" Tag="HotelMap" Style="{DynamicResource OptionButtonTemplate}" Height="60" GroupName="MainOptions" Content="Hotel Map" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="{Binding ActualHeight, ConverterParameter=0.015, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}"/>
+                		<InheritedFrameworkControls:TouchRadioButton x:Name="PhotoGallery" Tag="PhotoGallery" Style="{DynamicResource OptionButtonTemplate}" Height="60" GroupName="MainOptions" Content="Photo Gallery" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="{Binding ActualHeight, ConverterParameter=0.015, Converter={StaticResource MultiplyValueConverter}, ElementName=animatableControl, Mode=OneWay}"/>
+                	</StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Border>
+    <CircularButton:CircularCloseButtonControl x:Name="closeButton" HorizontalAlignment="Right" Width="58" Margin="0,9,9,0" DockPanel.Dock="Right" VerticalAlignment="Top" />
+  </Grid>
+</Abstract:AnimatableControl>

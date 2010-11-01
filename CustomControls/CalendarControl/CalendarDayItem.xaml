@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CustomControls.CalendarControl.CalendarDayItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:TFC="clr-namespace:CustomControls.InheritedFrameworkControls" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="ButtonControlDayTemplate" TargetType="{x:Type TFC:TouchRadioButton}">
+            <Grid Background="White" Name="grd" Opacity="0.895">
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter Property="Background"  TargetName="grd">
+                        <Setter.Value>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FFE0D93A" Offset="0.25"/>
+                                <GradientStop Color="#FFF5F4CC" Offset="0.763"/>
+                            </RadialGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Opacity" Value="1" TargetName="grd"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>        
+    </UserControl.Resources>
+    <Border BorderBrush="White" BorderThickness="1">
+        <TFC:TouchRadioButton GroupName="CalenderGroup"  x:Name="btn"  Foreground="#FF959393" FontSize="47.45" FontWeight="Bold" FontFamily="./#GILSANUB"  Template="{DynamicResource ButtonControlDayTemplate}" Opacity="0.9" BorderBrush="White" Content="1"/>
+    </Border>
+</UserControl>

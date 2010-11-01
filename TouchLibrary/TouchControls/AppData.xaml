@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="TouchFramework.ControlHandlers.AppData"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Width="271"
+    Height="303"
+    >
+    <StackPanel Width="264">
+        <Canvas Name="Container" Height="301" Width="256">
+            <Image Name="image2" Canvas.Left="3" Canvas.Top="5" Height="187" Width="177"></Image>
+            <TextBlock Canvas.Left="3" Canvas.Top="198" Height="99" Name="textBlock1" Text="" Width="249" />
+            <Image Canvas.Left="186" Canvas.Top="5" Height="58" Name="Open" Stretch="Fill" Width="66" />
+            <Image Canvas.Left="186" Canvas.Top="69" Height="58" Name="Info" Stretch="Fill" Width="66" />
+            <Image Canvas.Left="186" Canvas.Top="134" Height="58" Name="Close" Stretch="Fill" Width="66" />
+        </Canvas>
+</StackPanel>
+
+
+
+</UserControl>
+

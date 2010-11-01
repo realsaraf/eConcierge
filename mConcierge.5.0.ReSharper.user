@@ -1,0 +1,1912 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:HotelExploreControl/f:HotelExplorer.xaml" caret="1637" fromTop="10" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:HotelExploreControl/f:HotelExplorer.xaml.cs" caret="2032" fromTop="9" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:MainWindow.xaml" caret="1388" fromTop="14" />
+      <File id="C954F554-399B-4BAB-9103-5EDBA2A3E241/f:DiningDAL.cs" caret="0" fromTop="0" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/d:ControlHandlers/f:MapBrowserHandler.cs" caret="1646" fromTop="43" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:MapLocation/f:LocationRadio.xaml.cs" caret="803" fromTop="23" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:CalendarControl/f:CalendarDayItem.xaml.cs" caret="762" fromTop="24" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Calendar.cs" caret="777" fromTop="24" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:CalendarControl/f:CalendarEventViewer.xaml.cs" caret="4035" fromTop="36" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:CalendarControl/f:TouchCalendar.xaml.cs" caret="12798" fromTop="11" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Dining.cs" caret="411" fromTop="13" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:Dining/f:DiningSubCateogryControl.xaml.cs" caret="6147" fromTop="29" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:FrameworkManger.cs" caret="6969" fromTop="24" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:Dining/f:DiningDetail.xaml.cs" caret="5567" fromTop="34" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:Dining/f:DiningControl.xaml.cs" caret="5784" fromTop="33" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:Transportation/f:TransportationDetail.xaml.cs" caret="803" fromTop="0" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Navigation.cs" caret="1225" fromTop="21" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:MapLocation/f:MapSearchControl.xaml.cs" caret="6151" fromTop="31" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:MapLocation/f:MapDirectionStepsView.xaml.cs" caret="3167" fromTop="17" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:MainWindow.xaml.cs" caret="4439" fromTop="25" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:HotelVideoControl/f:HotelVideoControl.xaml.cs" caret="4582" fromTop="25" />
+      <File id="045758F1-33E8-4985-9A10-AAA35EC4EFBA/d:TUIO/f:TuioTracking.cs" caret="4060" fromTop="13" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Accommodation.cs" caret="870" fromTop="15" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:HotelExplorer.cs" caret="5395" fromTop="26" />
+      <File id="7C59D620-D502-4916-A503-80B237A0DE8E/f:FrameworkControl.cs" caret="10462" fromTop="19" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:Transportation/f:TransportationControl.xaml.cs" caret="1377" fromTop="15" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Transportation.cs" caret="1195" fromTop="30" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml" caret="7480" fromTop="22" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:mapbackend.html" caret="3982" fromTop="14" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="6342" fromTop="39" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:HotelExplorer.cs" caret="5395" fromTop="26" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Transportation.cs" caret="441" fromTop="0" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Transportation.cs" caret="2082" fromTop="26" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:Transportation/f:TransportationControl.xaml.cs" caret="1230" fromTop="12" />
+      <File id="BBACA5C4-D30A-4115-8160-345DFA99791F/d:Transportation/f:TransportationControl.xaml.cs" caret="1351" fromTop="15" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Transportation.cs" caret="1460" fromTop="9" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:Transportation.cs" caret="693" fromTop="18" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml" caret="7480" fromTop="20" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml" caret="9047" fromTop="37" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="1944" fromTop="20" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="1634" fromTop="17" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="1944" fromTop="20" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="4389" fromTop="22" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="4554" fromTop="27" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="1990" fromTop="24" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="2415" fromTop="28" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="2668" fromTop="22" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="2360" fromTop="7" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="5071" fromTop="10" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="5199" fromTop="15" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="5295" fromTop="19" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="5737" fromTop="27" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="5634" fromTop="18" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="5737" fromTop="21" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="12422" fromTop="9" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="12552" fromTop="12" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="12695" fromTop="17" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:mapbackend.html" caret="3896" fromTop="25" />
+      <File id="81A47385-D796-422B-ABB0-D49A73B30D72/f:mapbackend.html" caret="3980" fromTop="29" />
+      <File id="D9540245-BBB6-4D42-8204-1553777ABF0B/f:MapBrowser.xaml.cs" caret="5421" fromTop="17" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="CornerOrigin`0" priority="1" />
+      <Item value="System" priority="5" />
+      <Item value="Windows" priority="7" />
+      <Item value="as" priority="28" />
+      <Item value="base" priority="6" />
+      <Item value="point" priority="2" />
+      <Item value="relative" priority="11" />
+      <Item value="visual" priority="0" />
+      <Item value="Visual`0" priority="1" />
+      <Item value="UIElement`0" priority="9" />
+      <Item value="IBookPage`0" priority="1" />
+      <Item value="Loaded" priority="8" />
+      <Item value="TouchFramework" priority="1" />
+      <Item value="FrameworkConfiguration`0" priority="0" />
+      <Item value="FrameworkControl`0" priority="0" />
+      <Item value="return" priority="60" />
+      <Item value="null" priority="81" />
+      <Item value="private" priority="21" />
+      <Item value="TouchDictionary`0" priority="2" />
+      <Item value="if" priority="133" />
+      <Item value="_objectTouches" priority="3" />
+      <Item value="new" priority="106" />
+      <Item value="TouchDictionary" priority="0" />
+      <Item value="value" priority="9" />
+      <Item value="PointF`0" priority="1" />
+      <Item value="_actionCenter" priority="4" />
+      <Item value="PointF" priority="1" />
+      <Item value="set" priority="2" />
+      <Item value="_moveCenter" priority="0" />
+      <Item value="ITouchProperties`0" priority="0" />
+      <Item value="int" priority="9" />
+      <Item value="TouchProperties" priority="3" />
+      <Item value="true" priority="51" />
+      <Item value="framework" priority="0" />
+      <Item value="canvas1" priority="4" />
+      <Item value="currentTrackingType" priority="0" />
+      <Item value="static" priority="12" />
+      <Item value="_frameworkControl" priority="0" />
+      <Item value="_displayPoints" priority="0" />
+      <Item value="ImageBrush`0" priority="1" />
+      <Item value="BitmapImage`0" priority="1" />
+      <Item value="var" priority="62" />
+      <Item value="Rectangle`0" priority="1" />
+      <Item value="rectangle" priority="5" />
+      <Item value="VerticalAlignment`0" priority="0" />
+      <Item value="HorizontalAlignment`0" priority="0" />
+      <Item value="FindResource`0" priority="4" />
+      <Item value="Brush" priority="1" />
+      <Item value="Height" priority="4" />
+      <Item value="Width" priority="4" />
+      <Item value="toggleButton" priority="5" />
+      <Item value="for" priority="1" />
+      <Item value="Style`0" priority="0" />
+      <Item value="SolidColorBrush`0" priority="2" />
+      <Item value="Color" priority="5" />
+      <Item value="ColorConverter" priority="3" />
+      <Item value="override" priority="27" />
+      <Item value="RoutedEventArgs`0" priority="1" />
+      <Item value="e" priority="24" />
+      <Item value="c" priority="15" />
+      <Item value="ToggleButton`0" priority="0" />
+      <Item value="Image" priority="0" />
+      <Item value="Canvas`0" priority="20" />
+      <Item value="GroupName" priority="0" />
+      <Item value="Array`0" priority="0" />
+      <Item value="String`0" priority="1" />
+      <Item value="List" priority="14" />
+      <Item value="Tag" priority="0" />
+      <Item value="toolTags" priority="0" />
+      <Item value="i" priority="5" />
+      <Item value="public" priority="67" />
+      <Item value="class" priority="3" />
+      <Item value="case" priority="7" />
+      <Item value="break" priority="10" />
+      <Item value="hotelVideoControl" priority="10" />
+      <Item value="rectangle1" priority="0" />
+      <Item value="PlayVideo`0" priority="0" />
+      <Item value="player" priority="1" />
+      <Item value="stopPlayer`0" priority="0" />
+      <Item value="SeekTo`0" priority="0" />
+      <Item value="Slider" priority="9" />
+      <Item value="playing" priority="0" />
+      <Item value="AutoChange" priority="1" />
+      <Item value="false" priority="74" />
+      <Item value="ManualChange" priority="0" />
+      <Item value="IsSliderCaptured" priority="0" />
+      <Item value="HotelVideoControlHandler`0" priority="0" />
+      <Item value="Source" priority="3" />
+      <Item value="HotelVideoControl`0" priority="3" />
+      <Item value="hotelExplorer" priority="21" />
+      <Item value="else" priority="10" />
+      <Item value="IMTouchControl`0" priority="28" />
+      <Item value="FrameworkElement`0" priority="7" />
+      <Item value="radio" priority="2" />
+      <Item value="HotelExplorer`0" priority="8" />
+      <Item value="UserControl`0" priority="2" />
+      <Item value="bool" priority="8" />
+      <Item value="RotateTransform`0" priority="1" />
+      <Item value="rotate" priority="1" />
+      <Item value="yAnimation" priority="0" />
+      <Item value="xAnimation" priority="0" />
+      <Item value="xpos" priority="1" />
+      <Item value="double" priority="19" />
+      <Item value="width" priority="4" />
+      <Item value="ypos" priority="0" />
+      <Item value="void" priority="16" />
+      <Item value="OuterRim" priority="0" />
+      <Item value="Thickness" priority="0" />
+      <Item value="Connect`0" priority="0" />
+      <Item value="source" priority="5" />
+      <Item value="destination" priority="6" />
+      <Item value="Line`0" priority="0" />
+      <Item value="line" priority="9" />
+      <Item value="minZ" priority="0" />
+      <Item value="Brushes" priority="1" />
+      <Item value="RegisterElement`0" priority="1" />
+      <Item value="ColorConverter`0" priority="0" />
+      <Item value="color" priority="0" />
+      <Item value="sourceScale" priority="1" />
+      <Item value="destScale" priority="1" />
+      <Item value="MessageBox`0" priority="1" />
+      <Item value="veMap" priority="4" />
+      <Item value="CancelTransforms" priority="2" />
+      <Item value="Container" priority="9" />
+      <Item value="TranslateTransform`0" priority="1" />
+      <Item value="translater" priority="3" />
+      <Item value="Point" priority="15" />
+      <Item value="ScaleTransform`0" priority="0" />
+      <Item value="scaler" priority="12" />
+      <Item value="ActualWidth" priority="1" />
+      <Item value="mapControl" priority="2" />
+      <Item value="while" priority="3" />
+      <Item value="control" priority="45" />
+      <Item value="MapButton`0" priority="2" />
+      <Item value="button" priority="11" />
+      <Item value="is" priority="4" />
+      <Item value="switch" priority="2" />
+      <Item value="VEMapStyle`0" priority="0" />
+      <Item value="event" priority="27" />
+      <Item value="EventHandler`0" priority="21" />
+      <Item value="EventArgs" priority="23" />
+      <Item value="UnHighLight`0" priority="0" />
+      <Item value="OnDoAnimateToOrigin" priority="1" />
+      <Item value="this" priority="58" />
+      <Item value="restore" priority="8" />
+      <Item value="disconnect" priority="0" />
+      <Item value="_canvas1" priority="2" />
+      <Item value="RemoveControl`0" priority="0" />
+      <Item value="shouldHighLight" priority="0" />
+      <Item value="JpegBitmapDecoder`0" priority="0" />
+      <Item value="LoadAllImages`0" priority="0" />
+      <Item value="PosAll`0" priority="1" />
+      <Item value="Space" priority="0" />
+      <Item value="cont" priority="4" />
+      <Item value="RadioButton`0" priority="4" />
+      <Item value="continue" priority="0" />
+      <Item value="Keyboard`0" priority="0" />
+      <Item value="Key`0" priority="0" />
+      <Item value="Application`0" priority="6" />
+      <Item value="AddPhoto`0" priority="1" />
+      <Item value="TouchAction" priority="23" />
+      <Item value="VEMapControl`0" priority="4" />
+      <Item value="MTSmoothMediatorContainer`0" priority="0" />
+      <Item value="MapControl`0" priority="0" />
+      <Item value="VeMap" priority="1" />
+      <Item value="_veVeMap" priority="0" />
+      <Item value="Uri" priority="2" />
+      <Item value="FrameworkManger" priority="3" />
+      <Item value="radioButton" priority="3" />
+      <Item value="mConciergeButton" priority="0" />
+      <Item value="Framework" priority="3" />
+      <Item value="containerId" priority="1" />
+      <Item value="FrameworkManager" priority="80" />
+      <Item value="Canvas" priority="1" />
+      <Item value="IMTSmoothMediatorContainer`0" priority="0" />
+      <Item value="Relative" priority="2" />
+      <Item value="currentTheme" priority="0" />
+      <Item value="ResourceDictionary`0" priority="1" />
+      <Item value="MainCanvas" priority="11" />
+      <Item value="foreach" priority="23" />
+      <Item value="virtual" priority="3" />
+      <Item value="ctor" priority="13" />
+      <Item value="mConciergeTool" priority="1" />
+      <Item value="NavigationTool" priority="3" />
+      <Item value="TransportationTool" priority="3" />
+      <Item value="CalendarTool" priority="3" />
+      <Item value="FoodTool" priority="1" />
+      <Item value="LandMarkTool" priority="3" />
+      <Item value="canvas" priority="24" />
+      <Item value="ScaleTransform" priority="0" />
+      <Item value="scal" priority="0" />
+      <Item value="st" priority="0" />
+      <Item value="Math`0" priority="2" />
+      <Item value="top" priority="17" />
+      <Item value="left" priority="23" />
+      <Item value="scale" priority="8" />
+      <Item value="IAnimatable`0" priority="0" />
+      <Item value="abstract" priority="0" />
+      <Item value="UnRegisterControl`0" priority="1" />
+      <Item value="TouchAction`0" priority="24" />
+      <Item value="supportAllTouchAction" priority="0" />
+      <Item value="touchActions" priority="2" />
+      <Item value="s" priority="0" />
+      <Item value="accommPhoto" priority="6" />
+      <Item value="Tapped" priority="3" />
+      <Item value="RoutedEventArgs" priority="0" />
+      <Item value="AccomPhotoHandler`0" priority="0" />
+      <Item value="handler" priority="0" />
+      <Item value="CommandButton" priority="2" />
+      <Item value="CommandDisk" priority="5" />
+      <Item value="CloseClick" priority="4" />
+      <Item value="OnCloseClick`0" priority="1" />
+      <Item value="p" priority="3" />
+      <Item value="sender" priority="26" />
+      <Item value="PictureControl`0" priority="0" />
+      <Item value="photo" priority="9" />
+      <Item value="pictureControl" priority="1" />
+      <Item value="AccommPhoto`0" priority="3" />
+      <Item value="sb" priority="4" />
+      <Item value="RepeatBehavior`0" priority="0" />
+      <Item value="DispatcherTimer`0" priority="0" />
+      <Item value="Timer" priority="0" />
+      <Item value="timer" priority="3" />
+      <Item value="canvasHeight" priority="3" />
+      <Item value="canvasWidth" priority="2" />
+      <Item value="photoRadius" priority="6" />
+      <Item value="photoRadiusHorizontal" priority="0" />
+      <Item value="photoRadiusVertical" priority="1" />
+      <Item value="IList" priority="0" />
+      <Item value="ClosePictureControl`0" priority="0" />
+      <Item value="List&lt;ClosePictureControl&gt;" priority="0" />
+      <Item value="Photos" priority="1" />
+      <Item value="Collapsed" priority="2" />
+      <Item value="Int32`0" priority="1" />
+      <Item value="ShowHotelExplorer`0" priority="1" />
+      <Item value="Touch`0" priority="0" />
+      <Item value="AnimatableControl`0" priority="0" />
+      <Item value="AnimationCompleted" priority="1" />
+      <Item value="AnimateTo`0" priority="0" />
+      <Item value="_canvas" priority="2" />
+      <Item value="_removeItem" priority="0" />
+      <Item value="_accomPhotos" priority="1" />
+      <Item value="GetInt`0" priority="0" />
+      <Item value="_hotelExplorer" priority="13" />
+      <Item value="UnRegisterEvents`0" priority="0" />
+      <Item value="Calendar`0" priority="1" />
+      <Item value="_calendar" priority="1" />
+      <Item value="CalendarControl`0" priority="0" />
+      <Item value="prop" priority="12" />
+      <Item value="calendarControl" priority="3" />
+      <Item value="WeatherTool" priority="4" />
+      <Item value="WeatherControl`0" priority="0" />
+      <Item value="WeatherCloseTapEvent`0" priority="0" />
+      <Item value="LoadDining`0" priority="0" />
+      <Item value="DiningTool" priority="1" />
+      <Item value="_mapControl" priority="0" />
+      <Item value="try" priority="8" />
+      <Item value="UnloadAccommodation`0" priority="0" />
+      <Item value="ResizeHotelExplorer`0" priority="0" />
+      <Item value="_hotelVideoControl" priority="6" />
+      <Item value="GMapControl`0" priority="3" />
+      <Item value="DataContext" priority="5" />
+      <Item value="MapType" priority="0" />
+      <Item value="MapType`0" priority="1" />
+      <Item value="MapControl" priority="0" />
+      <Item value="GMap" priority="0" />
+      <Item value="NET" priority="0" />
+      <Item value="WindowsForms" priority="0" />
+      <Item value="GMapTouchable`0" priority="0" />
+      <Item value="OutCanvas" priority="0" />
+      <Item value="size" priority="9" />
+      <Item value="using" priority="5" />
+      <Item value="Cjc.ChromiumBrowser" priority="0" />
+      <Item value="WebBrowser`0" priority="4" />
+      <Item value="CjcAwesomiumWrapper" priority="0" />
+      <Item value="Cjc" priority="3" />
+      <Item value="ChromiumBrowser" priority="3" />
+      <Item value="browser" priority="9" />
+      <Item value="GMapControl" priority="10" />
+      <Item value="GDirection" priority="0" />
+      <Item value="Request" priority="1" />
+      <Item value="Double`0" priority="1" />
+      <Item value="height" priority="2" />
+      <Item value="newBrowser" priority="2" />
+      <Item value="Contains`1" priority="0" />
+      <Item value="Page" priority="1" />
+      <Item value="Unit" priority="0" />
+      <Item value="x" priority="7" />
+      <Item value="a" priority="6" />
+      <Item value="IsPostBack" priority="0" />
+      <Item value="SendMouseScroll`0" priority="1" />
+      <Item value="SourceButton" priority="1" />
+      <Item value="DestinationButton" priority="1" />
+      <Item value="DirectionButton" priority="0" />
+      <Item value="isCommandClicked" priority="1" />
+      <Item value="Closing" priority="0" />
+      <Item value="string" priority="39" />
+      <Item value="command" priority="4" />
+      <Item value="Border`0" priority="0" />
+      <Item value="border" priority="2" />
+      <Item value="CornerRadius" priority="0" />
+      <Item value="default" priority="0" />
+      <Item value="_mapBrowser" priority="16" />
+      <Item value="MapBrowser`0" priority="4" />
+      <Item value="IsStylusCaptureWithinProperty" priority="0" />
+      <Item value="eventViewer" priority="4" />
+      <Item value="_timer" priority="3" />
+      <Item value="_skip" priority="8" />
+      <Item value="_url" priority="1" />
+      <Item value="DataAccessLayer" priority="3" />
+      <Item value="Category`0" priority="0" />
+      <Item value="Event`0" priority="0" />
+      <Item value="conciergedb`0" priority="0" />
+      <Item value="context" priority="1" />
+      <Item value="Category" priority="0" />
+      <Item value="CategoryType`0" priority="0" />
+      <Item value="Title" priority="2" />
+      <Item value="container" priority="2" />
+      <Item value="typeof" priority="1" />
+      <Item value="IFrameworkManager`0" priority="2" />
+      <Item value="FrameworkManger`0" priority="1" />
+      <Item value="_unityContainer" priority="1" />
+      <Item value="frameworkManager" priority="7" />
+      <Item value="LifetimeManager`0" priority="0" />
+      <Item value="LandMarkControl`0" priority="2" />
+      <Item value="circularCloseButton" priority="1" />
+      <Item value="ICircularCloseButton`0" priority="1" />
+      <Item value="CloseButton" priority="4" />
+      <Item value="CircularCloseButton" priority="1" />
+      <Item value="ILandMarkControl`0" priority="0" />
+      <Item value="IDisposable`0" priority="1" />
+      <Item value="frameworkManger" priority="7" />
+      <Item value="_frameworkManager" priority="11" />
+      <Item value="enum" priority="0" />
+      <Item value="_container" priority="1" />
+      <Item value="_landMark" priority="0" />
+      <Item value="content" priority="0" />
+      <Item value="CircularCloseButton`0" priority="0" />
+      <Item value="_circularCloseButton" priority="0" />
+      <Item value="conciergedbEntities`0" priority="0" />
+      <Item value="categorytype`0" priority="0" />
+      <Item value="webClient" priority="0" />
+      <Item value="ec" priority="0" />
+      <Item value="DataContractJsonSerializer`0" priority="0" />
+      <Item value="contractJsonSerializer" priority="0" />
+      <Item value="DataContractJsonSerializer" priority="0" />
+      <Item value="CornerRadius`0" priority="1" />
+      <Item value="NewsStyleUriParser`0" priority="0" />
+      <Item value="CanvasContainer" priority="2" />
+      <Item value="TextBox" priority="1" />
+      <Item value="tb" priority="4" />
+      <Item value="Brushes`0" priority="0" />
+      <Item value="Keys`0" priority="0" />
+      <Item value="Escape" priority="0" />
+      <Item value="EventHandler" priority="5" />
+      <Item value="object" priority="3" />
+      <Item value="Object`0" priority="0" />
+      <Item value="_data" priority="0" />
+      <Item value="EventHandler&lt;DataEventArgs&gt;" priority="0" />
+      <Item value="SearchRequested" priority="2" />
+      <Item value="DataEventArgs" priority="7" />
+      <Item value="SearchBox" priority="1" />
+      <Item value="searchBox" priority="3" />
+      <Item value="IMTContainer`0" priority="3" />
+      <Item value="global" priority="2" />
+      <Item value="Locked" priority="6" />
+      <Item value="CircularLockToggleButton`0" priority="0" />
+      <Item value="CommandToggleButton" priority="4" />
+      <Item value="lockButton" priority="4" />
+      <Item value="Background" priority="0" />
+      <Item value="imageBrush" priority="1" />
+      <Item value="Stretch`0" priority="0" />
+      <Item value="ToggleButton" priority="0" />
+      <Item value="innerChild" priority="0" />
+      <Item value="resultNode" priority="1" />
+      <Item value="LocationResult`0" priority="2" />
+      <Item value="locationResult" priority="7" />
+      <Item value="child" priority="0" />
+      <Item value="locationNode" priority="1" />
+      <Item value="latitude" priority="0" />
+      <Item value="longitude" priority="0" />
+      <Item value="formattedAddress" priority="0" />
+      <Item value="geocodeResponseNode" priority="0" />
+      <Item value="statusNode" priority="1" />
+      <Item value="resultsNode" priority="0" />
+      <Item value="resultsNodes" priority="1" />
+      <Item value="results" priority="3" />
+      <Item value="ListBox`0" priority="0" />
+      <Item value="locationResults" priority="3" />
+      <Item value="LocationRadio`0" priority="3" />
+      <Item value="locationRadio" priority="9" />
+      <Item value="List&lt;LocationRadio&gt;" priority="0" />
+      <Item value="LocationRadios" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="locationSearchResult" priority="5" />
+      <Item value="_selectedLocation" priority="0" />
+      <Item value="_locationResults" priority="0" />
+      <Item value="_locationSearchResult" priority="3" />
+      <Item value="LocationSearchResult`0" priority="3" />
+      <Item value="checked" priority="0" />
+      <Item value="Checked" priority="2" />
+      <Item value="ChromBrowser" priority="7" />
+      <Item value="selectedLocation" priority="5" />
+      <Item value="_locationResultViewer" priority="1" />
+      <Item value="index" priority="2" />
+      <Item value="ShowMessage`0" priority="1" />
+      <Item value="IMTSmoothContainer`0" priority="0" />
+      <Item value="CenterFilter" priority="0" />
+      <Item value="globalPosition" priority="0" />
+      <Item value="BrowserContainer" priority="2" />
+      <Item value="Application" priority="0" />
+      <Item value="position" priority="1" />
+      <Item value="SearchBoxGotFocus" priority="1" />
+      <Item value="ChromBrowser`0" priority="0" />
+      <Item value="isFile" priority="0" />
+      <Item value="url" priority="1" />
+      <Item value="VEMap`0" priority="2" />
+      <Item value="VE" priority="0" />
+      <Item value="BingMapControl" priority="0" />
+      <Item value="menuButton" priority="14" />
+      <Item value="Map" priority="14" />
+      <Item value="ActualHeight" priority="0" />
+      <Item value="VEPushPin`0" priority="4" />
+      <Item value="newPin" priority="4" />
+      <Item value="VEPushPinState`0" priority="0" />
+      <Item value="MouseWheelEvent" priority="1" />
+      <Item value="_currentPin" priority="5" />
+      <Item value="location" priority="2" />
+      <Item value="_pinTouched" priority="0" />
+      <Item value="Mouse`0" priority="0" />
+      <Item value="ptTest" priority="4" />
+      <Item value="translatedPosition" priority="2" />
+      <Item value="SystemColors" priority="0" />
+      <Item value="Drawing" priority="0" />
+      <Item value="protected" priority="0" />
+      <Item value="Forms" priority="2" />
+      <Item value="item" priority="10" />
+      <Item value="geBrowser" priority="5" />
+      <Item value="GEWebBrowser`0" priority="1" />
+      <Item value="DiningControl" priority="0" />
+      <Item value="Center" priority="0" />
+      <Item value="RadiusX" priority="0" />
+      <Item value="RadiusY" priority="0" />
+      <Item value="ContextMenuProperty" priority="0" />
+      <Item value="host" priority="1" />
+      <Item value="cb" priority="1" />
+      <Item value="b" priority="5" />
+      <Item value="WidthProperty" priority="0" />
+      <Item value="Bitmap`0" priority="0" />
+      <Item value="ImageBrush" priority="0" />
+      <Item value="wfHost" priority="0" />
+      <Item value="Window`0" priority="0" />
+      <Item value="Window" priority="0" />
+      <Item value="window" priority="2" />
+      <Item value="Brush`0" priority="0" />
+      <Item value="Items" priority="0" />
+      <Item value="GeocodeLocation`0" priority="1" />
+      <Item value="Location`0" priority="0" />
+      <Item value="startLocation" priority="1" />
+      <Item value="GetRoute`0" priority="0" />
+      <Item value="endLocation" priority="0" />
+      <Item value="VEShapeType`0" priority="0" />
+      <Item value="mreq" priority="0" />
+      <Item value="Latitude" priority="1" />
+      <Item value="Longitude" priority="1" />
+      <Item value="EllipseGeometry`0" priority="0" />
+      <Item value="ImageSource`0" priority="5" />
+      <Item value="CircularToggleButton`0" priority="3" />
+      <Item value="unchecked" priority="0" />
+      <Item value="UncheckedImage" priority="0" />
+      <Item value="Data" priority="0" />
+      <Item value="data" priority="3" />
+      <Item value="DataEventArgs`0" priority="4" />
+      <Item value="MapDiskControl`0" priority="7" />
+      <Item value="topRightButton" priority="1" />
+      <Item value="topLeftButton" priority="1" />
+      <Item value="bottomRightButton" priority="1" />
+      <Item value="bottomLeftButton" priority="1" />
+      <Item value="Storyboard`0" priority="0" />
+      <Item value="_animating" priority="0" />
+      <Item value="TopLeftImage" priority="0" />
+      <Item value="topLeftImage" priority="0" />
+      <Item value="TopLeftText" priority="0" />
+      <Item value="topLeftText" priority="0" />
+      <Item value="TopRightText" priority="0" />
+      <Item value="topRightText" priority="0" />
+      <Item value="BottomLeftText" priority="0" />
+      <Item value="bottomLeftText" priority="0" />
+      <Item value="BottomRightText" priority="0" />
+      <Item value="bottomRightText" priority="0" />
+      <Item value="bottomRightImage" priority="0" />
+      <Item value="bottomLeftImage" priority="0" />
+      <Item value="topRightImage" priority="0" />
+      <Item value="disk" priority="6" />
+      <Item value="const" priority="0" />
+      <Item value="expandButton" priority="0" />
+      <Item value="collapseButton" priority="0" />
+      <Item value="_menuDisk" priority="4" />
+      <Item value="IFrameworkManger`0" priority="3" />
+      <Item value="SetDestination" priority="1" />
+      <Item value="SetSource" priority="1" />
+      <Item value="MapSearchControl`0" priority="3" />
+      <Item value="mapSearchControl" priority="6" />
+      <Item value="HideKeyBoard`0" priority="0" />
+      <Item value="_searchLocation" priority="0" />
+      <Item value="SetSouceButton" priority="1" />
+      <Item value="isEnabled" priority="0" />
+      <Item value="SetDestinationButton" priority="1" />
+      <Item value="d" priority="0" />
+      <Item value="PropertyChangedCallback" priority="0" />
+      <Item value="SEARCH_LOCATION" priority="0" />
+      <Item value="SelectedLocation" priority="0" />
+      <Item value="Collapse`0" priority="0" />
+      <Item value="storyboard" priority="0" />
+      <Item value="MenuChecked" priority="0" />
+      <Item value="IsLocked" priority="1" />
+      <Item value="_mapSearchControl" priority="8" />
+      <Item value="_navigationMenuDisk" priority="12" />
+      <Item value="direction" priority="3" />
+      <Item value="origin" priority="4" />
+      <Item value="searchKey" priority="0" />
+      <Item value="directionSteps" priority="13" />
+      <Item value="Step`0" priority="0" />
+      <Item value="step" priority="2" />
+      <Item value="DirectionSteps`0" priority="0" />
+      <Item value="stepNode" priority="0" />
+      <Item value="stepCount" priority="0" />
+      <Item value="DirectionStep`0" priority="0" />
+      <Item value="steps" priority="2" />
+      <Item value="directionStep" priority="0" />
+      <Item value="directionStepsList" priority="0" />
+      <Item value="MapDirectionStepsView`0" priority="1" />
+      <Item value="_mapDirectionStepsView" priority="1" />
+      <Item value="closeButton" priority="39" />
+      <Item value="directionStepses" priority="0" />
+      <Item value="MapDirectionStepControl`0" priority="1" />
+      <Item value="MapDirectionStepsControls" priority="0" />
+      <Item value="List&lt;MapDirectionStepControl&gt;" priority="0" />
+      <Item value="mapdirectionStepControl" priority="1" />
+      <Item value="stepsContainer" priority="0" />
+      <Item value="scrollViewer" priority="2" />
+      <Item value="legs" priority="0" />
+      <Item value="Steps" priority="0" />
+      <Item value="List&lt;DirectionStep&gt;" priority="0" />
+      <Item value="Click" priority="5" />
+      <Item value="Close`0" priority="8" />
+      <Item value="Button`0" priority="0" />
+      <Item value="RegisterUnRegisetrCellItem`0" priority="0" />
+      <Item value="DayItemHandler`0" priority="0" />
+      <Item value="AutoResizedEventHandler`0" priority="0" />
+      <Item value="DayButton" priority="0" />
+      <Item value="eventDetail" priority="3" />
+      <Item value="ComboBoxScrollViewer" priority="0" />
+      <Item value="loadingBlock" priority="1" />
+      <Item value="Visibility`0" priority="0" />
+      <Item value="setSourceButton" priority="2" />
+      <Item value="setDestinationButton" priority="2" />
+      <Item value="getDirectionsButton" priority="2" />
+      <Item value="searchLocationButton" priority="2" />
+      <Item value="SetDestinationButtonClick`0" priority="0" />
+      <Item value="GetDirectionsButtonClick`0" priority="0" />
+      <Item value="SearchLocationButtonClick`0" priority="0" />
+      <Item value="_toolDock" priority="0" />
+      <Item value="Closed" priority="16" />
+      <Item value="AddControl`0" priority="1" />
+      <Item value="_maxZIndex" priority="1" />
+      <Item value="eventButton" priority="0" />
+      <Item value="contentScroller" priority="5" />
+      <Item value="ColumnDefinition`0" priority="0" />
+      <Item value="col" priority="1" />
+      <Item value="row" priority="0" />
+      <Item value="NoOfItemInColumn" priority="0" />
+      <Item value="RowDefinition`0" priority="0" />
+      <Item value="LandMarkItem`0" priority="4" />
+      <Item value="imageData" priority="0" />
+      <Item value="DTOLandmark`0" priority="1" />
+      <Item value="landmark" priority="11" />
+      <Item value="ScrollViewer`0" priority="0" />
+      <Item value="LandMarkDAL`0" priority="1" />
+      <Item value="_landMarkDAL" priority="1" />
+      <Item value="LandMark" priority="0" />
+      <Item value="Landmark" priority="0" />
+      <Item value="byte" priority="0" />
+      <Item value="Picture" priority="1" />
+      <Item value="WpfUtil`0" priority="0" />
+      <Item value="Description" priority="0" />
+      <Item value="Address" priority="0" />
+      <Item value="Telephone" priority="0" />
+      <Item value="LandMarkDetail`0" priority="0" />
+      <Item value="landMarkItem" priority="0" />
+      <Item value="poiButton" priority="1" />
+      <Item value="cmbCategory" priority="2" />
+      <Item value="pager" priority="2" />
+      <Item value="categoryId" priority="0" />
+      <Item value="skipWeatherClose" priority="2" />
+      <Item value="_skipLandmarkClose" priority="0" />
+      <Item value="List&lt;LandMarkDetail&gt;" priority="0" />
+      <Item value="_landMarkDetails" priority="1" />
+      <Item value="landMarkDetail" priority="0" />
+      <Item value="LoadSlider`0" priority="0" />
+      <Item value="imageContainer" priority="1" />
+      <Item value="SendMouseDown`0" priority="0" />
+      <Item value="_lastPostion" priority="0" />
+      <Item value="XamlGeneratedNamespace" priority="0" />
+      <Item value="float" priority="3" />
+      <Item value="_lastPosition" priority="5" />
+      <Item value="y" priority="2" />
+      <Item value="UpdateLastPosition`0" priority="0" />
+      <Item value="CloseClicked" priority="1" />
+      <Item value="book" priority="1" />
+      <Item value="StartScale" priority="0" />
+      <Item value="List&lt;DiningSubCateogryControl&gt;" priority="0" />
+      <Item value="_diningSubcategories" priority="1" />
+      <Item value="diningSubCateogryControl" priority="0" />
+      <Item value="List&lt;DiningDetail&gt;" priority="0" />
+      <Item value="_diningDetailControls" priority="3" />
+      <Item value="diningDetailControl" priority="0" />
+      <Item value="_categoryId" priority="2" />
+      <Item value="_menuBook" priority="2" />
+      <Item value="subCategoryId" priority="0" />
+      <Item value="TouchRadioButton`0" priority="0" />
+      <Item value="categoryCombo" priority="6" />
+      <Item value="titleToggleButton" priority="0" />
+      <Item value="SelectedItem" priority="0" />
+      <Item value="_skipTransportationClose" priority="0" />
+      <Item value="List&lt;TransportationDetail&gt;" priority="0" />
+      <Item value="transportationDetailControl" priority="0" />
+      <Item value="_transportationDetailControls" priority="3" />
+      <Item value="List&lt;WeatherDay&gt;" priority="0" />
+      <Item value="weatherDay" priority="0" />
+      <Item value="_weatherDayControls" priority="0" />
+      <Item value="EventViewer`0" priority="0" />
+      <Item value="List&lt;EventViewer&gt;" priority="0" />
+      <Item value="_eventViewerControls" priority="0" />
+      <Item value="EventDetail`0" priority="0" />
+      <Item value="List&lt;EventDetail&gt;" priority="0" />
+      <Item value="_eventDetailControls" priority="2" />
+      <Item value="eventDetailControl" priority="0" />
+      <Item value="eventViewerControl" priority="0" />
+      <Item value="_skipCalendarClose" priority="0" />
+      <Item value="_skipHEClosedEvent" priority="0" />
+      <Item value="Cleanup`0" priority="0" />
+      <Item value="TrackBar" priority="0" />
+      <Item value="SCALE" priority="0" />
+      <Item value="_hotelMap" priority="1" />
+      <Item value="MTDirectContainer`0" priority="1" />
+      <Item value="_clearTransformsNext" priority="0" />
+      <Item value="ResetTransforms`0" priority="0" />
+      <Item value="Transforms" priority="0" />
+      <Item value="toAdd" priority="0" />
+      <Item value="MTSmoothContainerRev`0" priority="2" />
+      <Item value="updatePosition`0" priority="0" />
+      <Item value="mtContainer" priority="0" />
+      <Item value="ObjectTouches" priority="0" />
+      <Item value="WorkingObject" priority="6" />
+      <Item value="Elements" priority="0" />
+      <Item value="element" priority="2" />
+      <Item value="HasTouch" priority="0" />
+      <Item value="curTouch" priority="0" />
+      <Item value="mapBrowser" priority="8" />
+      <Item value="newX" priority="1" />
+      <Item value="newY" priority="0" />
+      <Item value="Thread`0" priority="1" />
+      <Item value="CancelMove" priority="6" />
+      <Item value="action" priority="0" />
+      <Item value="dayItem" priority="1" />
+      <Item value="_dayItems" priority="1" />
+      <Item value="List&lt;CalendarDayItem&gt;" priority="0" />
+      <Item value="KeyboardHandler`0" priority="0" />
+      <Item value="mouseDownEvent" priority="0" />
+      <Item value="key" priority="1" />
+      <Item value="OnScreenKey`0" priority="2" />
+      <Item value="VisualState`0" priority="0" />
+      <Item value="parent" priority="1" />
+      <Item value="UInt32`0" priority="0" />
+      <Item value="TouchControls" priority="0" />
+      <Item value="scaleFactor" priority="1" />
+      <Item value="Cursor" priority="1" />
+      <Item value="Cursors`0" priority="1" />
+      <Item value="FiveButtonDiskControl" priority="0" />
+      <Item value="_collapseStoryboard" priority="1" />
+      <Item value="_expandStoryboard" priority="0" />
+      <Item value="_contentLoaded" priority="0" />
+      <Item value="Point`0" priority="0" />
+      <Item value="translatePoint" priority="1" />
+      <Item value="CircularCloseButtonControl`0" priority="0" />
+      <Item value="_cancelMoveTimer" priority="4" />
+      <Item value="scaleButton" priority="2" />
+      <Item value="CanScale" priority="0" />
+      <Item value="centerX" priority="0" />
+      <Item value="centerY" priority="1" />
+      <Item value="_centerX" priority="0" />
+      <Item value="_centerY" priority="0" />
+      <Item value="Drag" priority="1" />
+      <Item value="readonly" priority="0" />
+      <Item value="List&lt;Line&gt;" priority="0" />
+      <Item value="_connectors" priority="0" />
+      <Item value="dataEventArgs" priority="0" />
+      <Item value="values" priority="2" />
+      <Item value="_skipHeClosedEvent" priority="0" />
+      <Item value="DetailControlAdded" priority="1" />
+      <Item value="CalendarEventDetail`0" priority="1" />
+      <Item value="List&lt;CalendarEventDetail&gt;" priority="0" />
+      <Item value="calendarEventDetail" priority="1" />
+      <Item value="DiningDetail`0" priority="0" />
+      <Item value="diningDetail" priority="2" />
+      <Item value="InvokeDetailControlAdded`0" priority="1" />
+      <Item value="transportationDetail" priority="2" />
+      <Item value="TransportationDetail`0" priority="0" />
+      <Item value="InvokeClosed`0" priority="2" />
+      <Item value="_skipnavigationClose" priority="0" />
+      <Item value="_directionsControl" priority="4" />
+      <Item value="mapDirectionStepsView" priority="0" />
+      <Item value="_searchControl" priority="0" />
+      <Item value="_transportationControl" priority="2" />
+      <Item value="DestinationButtonText" priority="1" />
+      <Item value="SourceButtonText" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ItemsControl">
+      <Item value="InputHitTest`0" priority="0" />
+      <Item value="TransformToVisual`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Shapes.Rectangle">
+      <Item value="VerticalAlignment" priority="0" />
+      <Item value="HorizontalAlignment" priority="0" />
+      <Item value="Fill" priority="0" />
+      <Item value="MouseDown" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.VerticalAlignment">
+      <Item value="Bottom" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.HorizontalAlignment">
+      <Item value="Stretch" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Primitives.ToggleButton">
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="Style" priority="0" />
+      <Item value="Background" priority="0" />
+      <Item value="IsChecked" priority="8" />
+      <Item value="Tag" priority="2" />
+      <Item value="Checked" priority="3" />
+      <Item value="Unchecked" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.ColorConverter">
+      <Item value="ConvertFromString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TouchFramework.TouchAction">
+      <Item value="Tap" priority="9" />
+      <Item value="Move" priority="1" />
+      <Item value="SelectToFront" priority="1" />
+      <Item value="Resize" priority="0" />
+      <Item value="Slide" priority="1" />
+      <Item value="Flick" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Controls.Primitives.ToggleButton">
+      <Item value="CheckedEvent" priority="0" />
+      <Item value="UncheckedEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Controls.Canvas">
+      <Item value="SetZIndex`0" priority="2" />
+      <Item value="GetTop`0" priority="5" />
+      <Item value="RightProperty" priority="0" />
+      <Item value="GetLeft`0" priority="6" />
+      <Item value="LeftProperty" priority="0" />
+      <Item value="GetZIndex`0" priority="2" />
+      <Item value="SetBottom`0" priority="0" />
+      <Item value="SetRight`0" priority="0" />
+      <Item value="GetBottom`0" priority="0" />
+      <Item value="GetRight`0" priority="0" />
+      <Item value="SetLeft`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.HotelVideo.HotelVideoControl">
+      <Item value="SetVideo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.RoutedPropertyChangedEventArgs`1">
+      <Item value="NewValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Slider">
+      <Item value="Value" priority="0" />
+      <Item value="GotMouseCapture" priority="0" />
+      <Item value="LostMouseCapture" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.MediaPlayer">
+      <Item value="Position" priority="0" />
+      <Item value="NaturalDuration" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Duration">
+      <Item value="TimeSpan" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="TotalMilliseconds" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.HotelVideoControl.HotelVideoControl">
+      <Item value="Slider" priority="0" />
+      <Item value="PlayVideo`0" priority="0" />
+      <Item value="Opacity" priority="0" />
+      <Item value="IsDisplayed" priority="1" />
+      <Item value="TrackBar" priority="0" />
+      <Item value="CloseClick" priority="0" />
+      <Item value="Dispose`0" priority="0" />
+      <Item value="Loaded" priority="0" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.HotelExplorer">
+      <Item value="Container" priority="7" />
+      <Item value="ActualWidth" priority="4" />
+      <Item value="ActualHeight" priority="2" />
+      <Item value="HightLight`0" priority="2" />
+      <Item value="IsFloating" priority="2" />
+      <Item value="OnDoAnimateToOrigin" priority="1" />
+      <Item value="Connector" priority="1" />
+      <Item value="ClearChoices`0" priority="1" />
+      <Item value="CurrentDisplayedControl" priority="0" />
+      <Item value="TourVideoOption" priority="0" />
+      <Item value="AccomodationsOption" priority="0" />
+      <Item value="HotelMapOption" priority="0" />
+      <Item value="PhotoGalleryOption" priority="0" />
+      <Item value="IsDisplayed" priority="1" />
+      <Item value="AnimationCompleted" priority="0" />
+      <Item value="Width" priority="2" />
+      <Item value="Height" priority="2" />
+      <Item value="Drag" priority="0" />
+      <Item value="TranslatePoint`0" priority="0" />
+      <Item value="CloseButton" priority="0" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.IMTContainer">
+      <Item value="Id" priority="7" />
+      <Item value="Transforms" priority="0" />
+      <Item value="Reset`0" priority="3" />
+      <Item value="WorkingObject" priority="0" />
+      <Item value="StartX" priority="2" />
+      <Item value="StartY" priority="1" />
+      <Item value="CancelTransforms" priority="4" />
+      <Item value="TopContainer" priority="0" />
+      <Item value="Locked" priority="0" />
+      <Item value="ObjectTouches" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.RadioButton">
+      <Item value="IsChecked" priority="9" />
+      <Item value="Unchecked" priority="0" />
+      <Item value="DataContext" priority="1" />
+      <Item value="Checked" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CustomControls.HotelExplorer">
+      <Item value="GetInstance`0" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.RotateTransform">
+      <Item value="AngleProperty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Canvas">
+      <Item value="ActualWidth" priority="10" />
+      <Item value="Children" priority="7" />
+      <Item value="ActualHeight" priority="10" />
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="2" />
+      <Item value="Clip" priority="0" />
+      <Item value="SetBinding`0" priority="0" />
+      <Item value="PreviewTouchDown" priority="0" />
+      <Item value="ManipulationDelta" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CustomControls.HotelVideoControl.HotelVideoControl">
+      <Item value="GetInstance`0" priority="3" />
+      <Item value="OpacityProperty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Border">
+      <Item value="BorderThickness" priority="0" />
+      <Item value="IsHitTestVisible" priority="0" />
+      <Item value="CornerRadius" priority="0" />
+      <Item value="Child" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Max`0" priority="0" />
+      <Item value="Min`0" priority="0" />
+      <Item value="Ceiling`0" priority="2" />
+      <Item value="Floor`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Shapes.Line">
+      <Item value="Height" priority="0" />
+      <Item value="Fill" priority="0" />
+      <Item value="Stroke" priority="0" />
+      <Item value="StrokeThickness" priority="0" />
+      <Item value="X1" priority="0" />
+      <Item value="Y1" priority="0" />
+      <Item value="X2" priority="1" />
+      <Item value="Y2" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Colors">
+      <Item value="Red" priority="1" />
+      <Item value="Transparent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Brushes">
+      <Item value="Red" priority="0" />
+      <Item value="Black" priority="0" />
+      <Item value="Gray" priority="0" />
+      <Item value="Transparent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.FrameworkElement">
+      <Item value="Width" priority="0" />
+      <Item value="ActualWidth" priority="2" />
+      <Item value="ActualHeight" priority="2" />
+      <Item value="Tag" priority="0" />
+      <Item value="Parent" priority="0" />
+      <Item value="InputHitTest`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.IMTSmoothMediatorContainer">
+      <Item value="OnApplyingTransforms" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:InfoStrat.VE.VEMap">
+      <Item value="DoMapMove`0" priority="0" />
+      <Item value="DoMapYaw`0" priority="0" />
+      <Item value="DoMapZoom`0" priority="0" />
+      <Item value="MapStyle" priority="0" />
+      <Item value="Dispose`0" priority="1" />
+      <Item value="PointToLatLong`0" priority="1" />
+      <Item value="GlobeControl" priority="7" />
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.TransformGroup">
+      <Item value="Children" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Count`1" priority="0" />
+      <Item value="FirstOrDefault`1" priority="0" />
+      <Item value="LastOrDefault`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.TranslateTransform">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.Matrix">
+      <Item value="OffsetX" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.ScaleTransform">
+      <Item value="ScaleX" priority="5" />
+      <Item value="CenterX" priority="0" />
+      <Item value="CenterY" priority="0" />
+      <Item value="ScaleY" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapControl.MapControl">
+      <Item value="InputHitTest`0" priority="0" />
+      <Item value="VeMap" priority="2" />
+      <Item value="LockButton" priority="0" />
+      <Item value="MenuButton" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.PointF">
+      <Item value="X" priority="10" />
+      <Item value="Y" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapControl.MapButton">
+      <Item value="Tag" priority="1" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals`0" priority="7" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="Replace`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@InfoStrat.VE.VEMapStyle">
+      <Item value="Road" priority="0" />
+      <Item value="Aerial" priority="0" />
+      <Item value="Hybrid" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.VisualTreeHelper">
+      <Item value="GetParent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.UIElementCollection">
+      <Item value="Remove`0" priority="2" />
+      <Item value="Add`0" priority="3" />
+      <Item value="OfType`1" priority="0" />
+      <Item value="Contains`0" priority="0" />
+      <Item value="Clear`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.IMTouchControl">
+      <Item value="Container" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:mConcierge.MainWindow">
+      <Item value="KeyDown" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="Resources" priority="1" />
+      <Item value="ActualHeight" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Input.KeyEventArgs">
+      <Item value="Key" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.MTContainer">
+      <Item value="WorkingObject" priority="1" />
+      <Item value="Id" priority="1" />
+      <Item value="HasTouch" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Input.Key">
+      <Item value="Zoom" priority="1" />
+      <Item value="Subtract" priority="0" />
+      <Item value="F2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Application">
+      <Item value="Current" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Application">
+      <Item value="Exit" priority="0" />
+      <Item value="MainWindow" priority="2" />
+      <Item value="Properties" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.SupportedActions">
+      <Item value="AddSupport`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapControl.VEMapControl">
+      <Item value="Parent" priority="1" />
+      <Item value="Container" priority="0" />
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:mConcierge.FrameworkManger">
+      <Item value="RegisterElement`0" priority="7" />
+      <Item value="RemoveControl`0" priority="3" />
+      <Item value="UnRegisterControl`0" priority="3" />
+      <Item value="ReRegisterControl`0" priority="0" />
+      <Item value="UnRegisterElement`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.FrameworkControl">
+      <Item value="UnregisterAllElements`0" priority="0" />
+      <Item value="UnregisterElement`0" priority="0" />
+      <Item value="Stop`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Configuration.ConfigurationManager">
+      <Item value="AppSettings" priority="2" />
+      <Item value="ConnectionStrings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="8" />
+      <Item value="Empty" priority="11" />
+      <Item value="IsNullOrEmpty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.ResourceDictionary">
+      <Item value="MergedDictionaries" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.Collection`1">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.StackPanel">
+      <Item value="Children" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString`0" priority="2" />
+      <Item value="ToInt`0" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.HotelaccommodationControl.AccommPhoto">
+      <Item value="IsDisplayed" priority="1" />
+      <Item value="OnTapped`0" priority="0" />
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CircularCloseButton.CircularCloseButtonControl">
+      <Item value="OnTapped`0" priority="0" />
+      <Item value="CommandButton" priority="0" />
+      <Item value="Tapped" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Button">
+      <Item value="Click" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.PictureControl.PictureControl">
+      <Item value="CloseClick" priority="0" />
+      <Item value="Tag" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.Animation.Storyboard">
+      <Item value="RepeatBehavior" priority="0" />
+      <Item value="Begin`0" priority="0" />
+      <Item value="Completed" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Tick" priority="3" />
+      <Item value="Interval" priority="2" />
+      <Item value="Start`0" priority="2" />
+      <Item value="Stop`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Abstract.AnimatableControl">
+      <Item value="ActualHeight" priority="0" />
+      <Item value="AnimateTo`0" priority="1" />
+      <Item value="AnimateToCompleted`0" priority="1" />
+      <Item value="AnimationCompleted" priority="2" />
+      <Item value="Tag" priority="0" />
+      <Item value="Clip" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.HotelExploreControl.HotelExplorer">
+      <Item value="ActualWidth" priority="0" />
+      <Item value="ActualHeight" priority="0" />
+      <Item value="Visibility" priority="0" />
+      <Item value="ClearChoices`0" priority="1" />
+      <Item value="OptionUnUnChecked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Add`0" priority="2" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.PictureControl.ClosePictureControl">
+      <Item value="CloseClick" priority="0" />
+      <Item value="ActualWidth" priority="0" />
+      <Item value="Container" priority="1" />
+      <Item value="Loaded" priority="0" />
+      <Item value="Close`0" priority="1" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Visibility">
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Point">
+      <Item value="X" priority="4" />
+      <Item value="Y" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.TempControlsForDemo.CalendarControl">
+      <Item value="CloseButton" priority="3" />
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TouchFramework.Events.MTEvents">
+      <Item value="TapEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@GMap.NET.MapType">
+      <Item value="GoogleMap" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.WindowStyle">
+      <Item value="SingleBorderWindow" priority="0" />
+      <Item value="None" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GMap.NET.WindowsForms.GMapControl">
+      <Item value="MapType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.GMapControl.GMapControl">
+      <Item value="ActualWidth" priority="0" />
+      <Item value="ActualHeight" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.GMapControls.GMapUserControl">
+      <Item value="MapTouchable" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchControls.ChromBrowser">
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="newBrowser" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Subgurim.Controles.GMap">
+      <Item value="addGDirection`0" priority="0" />
+      <Item value="enableContinuousZoom" priority="0" />
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="1" />
+      <Item value="enableScrollWheelZoom" priority="0" />
+      <Item value="enableHookMouseWheelToZoom" priority="0" />
+      <Item value="addMovement`0" priority="0" />
+      <Item value="gOverViewMap" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="QueryString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="Parse`0" priority="1" />
+      <Item value="NaN" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cjc.ChromiumBrowser.WebBrowser">
+      <Item value="InjectMouseWheel`0" priority="0" />
+      <Item value="RaiseMouseMove`0" priority="1" />
+      <Item value="ExecuteJavascript`0" priority="4" />
+      <Item value="webView" priority="2" />
+      <Item value="ExecuteJavascriptWithResult`0" priority="1" />
+      <Item value="GetContentAsText`0" priority="0" />
+      <Item value="LoadFile`0" priority="1" />
+      <Item value="webViewListener" priority="0" />
+      <Item value="Clip" priority="0" />
+      <Item value="Ready" priority="1" />
+      <Item value="QueryCursor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Specialized.NameValueCollection">
+      <Item value="AllKeys" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="Page" priority="0" />
+      <Item value="Parent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.SystemParameters">
+      <Item value="FullPrimaryScreenHeight" priority="1" />
+      <Item value="FullPrimaryScreenWidth" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchControls.MapBrowser">
+      <Item value="MenuDisk" priority="1" />
+      <Item value="SearchBox" priority="3" />
+      <Item value="Locked" priority="3" />
+      <Item value="LockButton" priority="1" />
+      <Item value="SearchBoxGotFocus" priority="0" />
+      <Item value="SearchBoxLostFocus" priority="0" />
+      <Item value="MenuButton" priority="0" />
+      <Item value="SetSource`0" priority="1" />
+      <Item value="UnLocked" priority="0" />
+      <Item value="MenuChecked" priority="0" />
+      <Item value="MenuUnChecked" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="InitializeControl`0" priority="0" />
+      <Item value="GetDestinations`0" priority="0" />
+      <Item value="SetDestination`0" priority="0" />
+      <Item value="IsLocked" priority="0" />
+      <Item value="TouchPoint" priority="1" />
+      <Item value="Container" priority="2" />
+      <Item value="CancelMove" priority="1" />
+      <Item value="CancelScale" priority="0" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CjcAwesomiumWrapper.WebView">
+      <Item value="SetTransparent`0" priority="0" />
+      <Item value="ZoomIn`0" priority="0" />
+      <Item value="GotoHistoryOffset`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.HtmlControls.HtmlGenericControl">
+      <Item value="class" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TouchControls.MapBrowser">
+      <Item value="GetInstance`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapDiskControl.MapDiskControl">
+      <Item value="CloseClick" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccessLayer.Category">
+      <Item value="CreateCategory`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccessLayer.Event">
+      <Item value="CreateEvent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccessLayer.conciergedb">
+      <Item value="Categories" priority="0" />
+      <Item value="AddToCategories`0" priority="0" />
+      <Item value="AddToCategoryTypes`0" priority="0" />
+      <Item value="SaveChanges`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Configuration.ConnectionStringSettings">
+      <Item value="ConnectionString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Practices.Unity.UnityContainer">
+      <Item value="RegisterType`0" priority="0" />
+      <Item value="Resolve`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.IFrameworkManager">
+      <Item value="Canvas" priority="0" />
+      <Item value="RegisterElement`0" priority="0" />
+      <Item value="UnRegisterControl`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Infrasturcture.TouchLibrary.TouchAction">
+      <Item value="Tap" priority="11" />
+      <Item value="ScrollY" priority="2" />
+      <Item value="Slide" priority="6" />
+      <Item value="None" priority="1" />
+      <Item value="Drag" priority="1" />
+      <Item value="BoundsCheck" priority="0" />
+      <Item value="Flick" priority="0" />
+      <Item value="Move" priority="0" />
+      <Item value="Resize" priority="0" />
+      <Item value="Rotate" priority="0" />
+      <Item value="ScrollX" priority="0" />
+      <Item value="SelectToFront" priority="0" />
+      <Item value="Spin" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ContentControl">
+      <Item value="Content" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.LandMark.LandMarkControl">
+      <Item value="CloseButton" priority="0" />
+      <Item value="Loaded" priority="0" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Abstract.TouchUserControl">
+      <Item value="Tapped" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccessLayer.conciergedbEntities">
+      <Item value="AddTocategorytypes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebClient">
+      <Item value="DownloadData`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Newtonsoft.Json.Linq.JObject">
+      <Item value="Children`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Newtonsoft.Json.Linq.JEnumerable`1">
+      <Item value="Values`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Newtonsoft.Json.Linq.JToken">
+      <Item value="HasValues" priority="0" />
+      <Item value="Next" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
+      <Item value="Foreground" priority="0" />
+      <Item value="Text" priority="5" />
+      <Item value="Tag" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Keys">
+      <Item value="Enter" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchControls.ControlHandlers.ElementHandler">
+      <Item value="TouchUp`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CircularButton.CircularLockToggleButton">
+      <Item value="ToggleButton" priority="3" />
+      <Item value="Container" priority="0" />
+      <Item value="CommandToggleButton" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Imaging.BitmapSource">
+      <Item value="Create`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.ImageBrush">
+      <Item value="Stretch" priority="0" />
+      <Item value="Opacity" priority="0" />
+      <Item value="ImageSource" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Stretch">
+      <Item value="None" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:mConcierge.LocationResult">
+      <Item value="Location" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlNode">
+      <Item value="ChildNodes" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="InnerText" priority="9" />
+      <Item value="SelectSingleNode`0" priority="6" />
+      <Item value="InnerXml" priority="0" />
+      <Item value="SelectNodes`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlNodeList">
+      <Item value="GetEnumerator`0" priority="1" />
+      <Item value="Count" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlDocument">
+      <Item value="SelectSingleNode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Count" priority="1" />
+      <Item value="Add`0" priority="12" />
+      <Item value="Clear`0" priority="5" />
+      <Item value="Remove`0" priority="8" />
+      <Item value="ToArray`0" priority="8" />
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapLocation.LocationRadio">
+      <Item value="DataContext" priority="0" />
+      <Item value="Location" priority="0" />
+      <Item value="Radio" priority="0" />
+      <Item value="ScrollViewer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapLocation.LocationSearchResult">
+      <Item value="MaxHeight" priority="0" />
+      <Item value="LocationRadios" priority="0" />
+      <Item value="SetSouceButton" priority="2" />
+      <Item value="SetDestinationButton" priority="2" />
+      <Item value="SelectedLocation" priority="0" />
+      <Item value="OnClosed`0" priority="0" />
+      <Item value="InitializeResults`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.InheritedFrameworkControls.TouchButton">
+      <Item value="Click" priority="8" />
+      <Item value="IsEnabled" priority="0" />
+      <Item value="MouseDown" priority="0" />
+      <Item value="DataContext" priority="1" />
+      <Item value="Tag" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CustomControls.MapLocation.LocationSearchResult">
+      <Item value="CreateInstance`0" priority="0" />
+      <Item value="GetFlowDirection`0" priority="0" />
+      <Item value="GetInstance`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.Global.Controls.LocationResult">
+      <Item value="Latitude" priority="0" />
+      <Item value="Longitude" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.LinearFilter2d">
+      <Item value="Position" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.IMTSmoothContainer">
+      <Item value="Position" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CjcAwesomiumWrapper.JSValue">
+      <Item value="ToInteger`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="StartupPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:InfoStrat.VE.VEPushPin">
+      <Item value="Style" priority="0" />
+      <Item value="CurrentState" priority="0" />
+      <Item value="AltMode" priority="0" />
+      <Item value="MouseDown" priority="0" />
+      <Item value="MouseUp" priority="0" />
+      <Item value="MouseMove" priority="1" />
+      <Item value="UpdatePosition`0" priority="0" />
+      <Item value="Latitude" priority="0" />
+      <Item value="Longitude" priority="0" />
+      <Item value="TranslatePoint`0" priority="0" />
+      <Item value="IsMouseDirectlyOver" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Input.Mouse">
+      <Item value="GetPosition`0" priority="1" />
+      <Item value="MouseDownEvent" priority="0" />
+      <Item value="OverrideCursor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:InfoStrat.VE.VELatLong">
+      <Item value="Latitude" priority="0" />
+      <Item value="Longitude" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Input.MouseButtonEventArgs">
+      <Item value="Handled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Color">
+      <Item value="A" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="White" priority="0" />
+      <Item value="Transparent" priority="1" />
+      <Item value="Empty" priority="0" />
+      <Item value="Red" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:InfoStrat.VE.PublicEventsGlobeControl">
+      <Item value="BackgroundImage" priority="0" />
+      <Item value="MouseDown" priority="1" />
+      <Item value="MouseClick" priority="0" />
+      <Item value="MouseMove" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Window">
+      <Item value="TranslatePoint`0" priority="0" />
+      <Item value="Show`0" priority="0" />
+      <Item value="Owner" priority="0" />
+      <Item value="Background" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Input.MouseEventArgs">
+      <Item value="GetPosition`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseEventArgs">
+      <Item value="Location" priority="2" />
+      <Item value="X" priority="0" />
+      <Item value="Y" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="X" priority="1" />
+      <Item value="Y" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ItemCollection">
+      <Item value="OfType`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@InfoStrat.VE.Utilities.AnimateUtility">
+      <Item value="AnimateElementPoint`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@InfoStrat.VE.VEPushPin">
+      <Item value="DisplayLatitudeProperty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FC.GEPluginCtrls.GEWebBrowser">
+      <Item value="BackColor" priority="1" />
+      <Item value="BackgroundImage" priority="1" />
+      <Item value="Url" priority="0" />
+      <Item value="LocationChanged" priority="0" />
+      <Item value="Parent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Dining.DiningControl">
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Integration.WindowsFormsHost">
+      <Item value="Background" priority="0" />
+      <Item value="Clip" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Integration.PropertyMap">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Integration.LayoutExceptionEventArgs">
+      <Item value="ThrowException" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapDiskControl.FiveButtonDiskControl">
+      <Item value="InitializeControlData`0" priority="0" />
+      <Item value="ActualSize" priority="0" />
+      <Item value="Expand`0" priority="0" />
+      <Item value="TopLeftButton" priority="0" />
+      <Item value="TopRightButton" priority="0" />
+      <Item value="BottomLeftButton" priority="0" />
+      <Item value="BottomRightButton" priority="0" />
+      <Item value="CollapseButton" priority="1" />
+      <Item value="TopRightButtonClick" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.FiveButtonDiskControl.FiveButtonDiskControl">
+      <Item value="ExpandButton" priority="1" />
+      <Item value="CollapseButton" priority="0" />
+      <Item value="TopLeftButton" priority="0" />
+      <Item value="TopRightButton" priority="0" />
+      <Item value="BottomLeftButton" priority="1" />
+      <Item value="BottomRightButton" priority="0" />
+      <Item value="InitializeControlData`0" priority="0" />
+      <Item value="Close`0" priority="3" />
+      <Item value="BottomRightButtonClick" priority="2" />
+      <Item value="TopLeftButtonClick" priority="0" />
+      <Item value="BottomLeftButtonClick" priority="0" />
+      <Item value="Collapsed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.IFrameworkManger">
+      <Item value="RegisterElement`0" priority="8" />
+      <Item value="AddControl`0" priority="7" />
+      <Item value="RemoveControl`0" priority="17" />
+      <Item value="UnRegisterElement`0" priority="17" />
+      <Item value="Canvas" priority="6" />
+      <Item value="AddControlWithAllGestures`0" priority="5" />
+      <Item value="AddControlWithAllNoGestures`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapLocation.MapSearchControl">
+      <Item value="InitializeControl`0" priority="0" />
+      <Item value="ShowKeyBoardRequested" priority="0" />
+      <Item value="HideKeyBoardRequested" priority="0" />
+      <Item value="SetDestination" priority="0" />
+      <Item value="SetSource" priority="0" />
+      <Item value="Close`0" priority="2" />
+      <Item value="Height" priority="0" />
+      <Item value="MaxHeight" priority="0" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.Global.Helpers.Events.DataEventArgs">
+      <Item value="Data" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.DependencyPropertyChangedEventArgs">
+      <Item value="NewValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Image">
+      <Item value="Source" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CircularButton.CircularToggleButton">
+      <Item value="Tag" priority="0" />
+      <Item value="Width" priority="0" />
+      <Item value="Checked" priority="2" />
+      <Item value="UnChecked" priority="1" />
+      <Item value="ActualHeight" priority="0" />
+      <Item value="ActualWidth" priority="0" />
+      <Item value="TranslatePoint`0" priority="0" />
+      <Item value="IsChecked" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Subgurim.Controles.GDirection">
+      <Item value="fromText" priority="0" />
+      <Item value="toText" priority="1" />
+      <Item value="autoGenerate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CustomControls.MapLocation.GMapUtil">
+      <Item value="GetLocations`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Helpers.GMapUtil">
+      <Item value="GetDirections`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Helpers.DirectionStep">
+      <Item value="Index" priority="0" />
+      <Item value="Distance" priority="0" />
+      <Item value="Description" priority="0" />
+      <Item value="Duration" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.RegularExpressions.Regex">
+      <Item value="Match`0" priority="0" />
+      <Item value="Replace`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.RegularExpressions.Match">
+      <Item value="Result`0" priority="0" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Helpers.DirectionSteps">
+      <Item value="OriginAddress" priority="0" />
+      <Item value="DestinationAddress" priority="0" />
+      <Item value="TotalDistance" priority="0" />
+      <Item value="TotalDuration" priority="0" />
+      <Item value="Steps" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapLocation.MapDirectionStepControl">
+      <Item value="DataContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ScrollViewer">
+      <Item value="Tag" priority="3" />
+      <Item value="ScrollToHorizontalOffset`0" priority="0" />
+      <Item value="HorizontalOffset" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:mConciergeClient.MainWindow">
+      <Item value="ActualHeight" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.MapLocation.MapDirectionStepsView">
+      <Item value="DataContext" priority="0" />
+      <Item value="Width" priority="0" />
+      <Item value="Closed" priority="1" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CalendarControl.TouchCalendar">
+      <Item value="InitializeControl`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="ActualHeight" priority="0" />
+      <Item value="ActualWidth" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="Width" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CircularButton.CircularCloseButtonControl">
+      <Item value="CommandButton" priority="0" />
+      <Item value="Button" priority="0" />
+      <Item value="Click" priority="12" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CalendarControl.DayItem">
+      <Item value="FontRatio" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.InheritedFrameworkControls.TouchRadioButton">
+      <Item value="Click" priority="1" />
+      <Item value="Checked" priority="0" />
+      <Item value="RaiseEvent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
+      <Item value="Visibility" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="Foreground" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Visibility">
+      <Item value="Collapsed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.UriKind">
+      <Item value="Relative" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.InheritedFrameworkControls.TrackBar">
+      <Item value="ValueChanged" priority="2" />
+      <Item value="Minimum" priority="0" />
+      <Item value="Maximum" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Grid">
+      <Item value="ColumnDefinitions" priority="0" />
+      <Item value="RowDefinitions" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.RowDefinitionCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CategoryControl.EventItem">
+      <Item value="Width" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.LandMark.DTOLandmark">
+      <Item value="Image" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Helpers.WpfUtil">
+      <Item value="BytesToImageSource`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CustomControls.LandMark.DTOLandmark">
+      <Item value="GetLandMarks`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.LandMark.LandMarkItem">
+      <Item value="DataContext" priority="1" />
+      <Item value="poiButton" priority="1" />
+      <Item value="MouseDown" priority="0" />
+      <Item value="LandMark" priority="0" />
+      <Item value="Click" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.InheritedFrameworkControls.IPhoneScrollViewer">
+      <Item value="ExtentWidth" priority="0" />
+      <Item value="HorizontalOffset" priority="1" />
+      <Item value="ScrollToHorizontalOffset`0" priority="0" />
+      <Item value="ActualWidth" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccessLayer.LandMarkDAL">
+      <Item value="GetLandMarks`0" priority="0" />
+      <Item value="GetInstance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccessLayer.LandMarkDAL">
+      <Item value="GetLandMarks`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Infrasturcture.WpfUtil">
+      <Item value="BytesToImageSource`0" priority="1" />
+      <Item value="GetImage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.DTO.DTOLandmark">
+      <Item value="Picture" priority="1" />
+      <Item value="Title" priority="1" />
+      <Item value="Description" priority="0" />
+      <Item value="Address" priority="0" />
+      <Item value="Telephone" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Controls.Primitives.ButtonBase">
+      <Item value="MouseDownEvent" priority="1" />
+      <Item value="ClickEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.DTO.DTOLandMark">
+      <Item value="Address" priority="0" />
+      <Item value="Description" priority="0" />
+      <Item value="Telephone" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CategoryControl.MTouchComboBox">
+      <Item value="btnCombo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CategoryControl.SliderPager">
+      <Item value="sld" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Transportation.TransportationDetail">
+      <Item value="CategoryId" priority="0" />
+      <Item value="Closed" priority="1" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccessLayer.TransportationDAL">
+      <Item value="GetCategories`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccessLayer.DiningDAL">
+      <Item value="GetInstance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccessLayer.CalendarDAL">
+      <Item value="GetInstance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Weather.WeatherControl">
+      <Item value="Closed" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.LandMark.LandMarkDetail">
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:mConciergeClient.FrameworkManger">
+      <Item value="RegisterElement`0" priority="0" />
+      <Item value="RemoveControl`0" priority="0" />
+      <Item value="AddControlWithAllGestures`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:_3dTile.FlipTile3D">
+      <Item value="Tag" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Dining.DiningSubCateogryControl">
+      <Item value="Closed" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="DetailControlAdded" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Dining.DiningDetail">
+      <Item value="CloseClicked" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="Closed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.TouchCombo.TouchComboBox">
+      <Item value="SelectedItem" priority="4" />
+      <Item value="Initialize`0" priority="1" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.InheritedFrameworkControls.TouchToggleButton">
+      <Item value="IsChecked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.TouchCombo.TouchComboBoxItem">
+      <Item value="Item" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CategoryControl.EventViewer">
+      <Item value="Closed" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CategoryControl.EventDetail">
+      <Item value="Closed" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.TransformCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.MTDirectContainer">
+      <Item value="Position" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.TouchDictionary">
+      <Item value="Count" priority="0" />
+      <Item value="Values" priority="0" />
+      <Item value="currTouchCount" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.ITouch">
+      <Item value="TouchPoint" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.MTElementDictionary">
+      <Item value="Values" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TouchFramework.Touch">
+      <Item value="TouchPoint" priority="0" />
+      <Item value="Properties" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infrasturcture.TouchLibrary.ITouchDictionary">
+      <Item value="TwoOrMoreTouch" priority="1" />
+      <Item value="CurrTouchCount" priority="0" />
+      <Item value="PrevTouchCount" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CalendarControl.CalendarDayItem">
+      <Item value="DayButton" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfKb.Controls.FloatingTouchScreenKeyboard">
+      <Item value="InputHitTest`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.RoutedEventArgs">
+      <Item value="RoutedEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfKb.Controls.OnScreenKey">
+      <Item value="Key" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfKb.LogicalKeys.ILogicalKey">
+      <Item value="Press`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Input.Cursors">
+      <Item value="None" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Input.QueryCursorEventArgs">
+      <Item value="Cursor" priority="0" />
+      <Item value="Handled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CalendarControl.CalendarEventViewer">
+      <Item value="DetailControlAdded" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.CalendarControl.CalendarEventDetail">
+      <Item value="Closed" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CustomControls.Transportation.TransportationControl">
+      <Item value="DetailControlAdded" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

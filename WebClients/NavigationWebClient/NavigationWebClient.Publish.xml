@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost/ConciergeNavigationClient" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/NavigationWebClient.pdb" publishTime="09/09/2010 02:13:50" />
+    <file relUrl="bin/Images/markers/orangelarge/image.png" publishTime="09/08/2010 23:27:50" />
+    <file relUrl="bin/GMaps.dll" publishTime="03/06/2010 20:02:42" />
+    <file relUrl="Images/markers/orangelarge/shadow.png" publishTime="09/08/2010 23:27:50" />
+    <file relUrl="Images/markers/orangelarge/image.png" publishTime="09/08/2010 23:27:50" />
+    <file relUrl="Web.config" publishTime="08/17/2010 03:29:52" />
+    <file relUrl="Images/markers/bluelarge/image.png" publishTime="09/08/2010 23:47:41" />
+    <file relUrl="Navigation.aspx" publishTime="09/09/2010 02:16:43" />
+    <file relUrl="bin/Images/markers/orangelarge/shadow.png" publishTime="09/08/2010 23:27:50" />
+    <file relUrl="Images/markers/bluelarge/shadow.png" publishTime="09/09/2010 01:31:03" />
+    <file relUrl="Global.asax" publishTime="08/12/2010 22:32:20" />
+    <file relUrl="bin/Helpers.dll" publishTime="09/08/2010 01:53:32" />
+    <file relUrl="bin/NavigationWebClient.dll" publishTime="09/09/2010 02:13:50" />
+    <file relUrl="bin/Helpers.pdb" publishTime="09/08/2010 01:53:32" />
+    <file relUrl="bin/Images/markers/bluelarge/image.png" publishTime="09/08/2010 23:47:41" />
+  </publishProfile>
+</publishData>

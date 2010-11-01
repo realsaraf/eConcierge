@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelFragment xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Application Name="CMS"
+                         Version="1.0.0.0"
+                         DefaultNavigationItem="CMS:/NavigationItems[Tasks]"
+                         Shell="Microsoft.LightSwitch:Standard"
+                         Theme="Microsoft.LightSwitch:Blue">
+    <Application.NavigationItems>
+      <ApplicationNavigationGroup Name="Tasks">
+        <ApplicationNavigationGroup.Attributes>
+          <DisplayName Value="Tasks" />
+        </ApplicationNavigationGroup.Attributes>
+      </ApplicationNavigationGroup>
+      <ApplicationNavigationGroup Name="Administration">
+        <ApplicationNavigationGroup.Attributes>
+          <DisplayName Value="Administration" />
+        </ApplicationNavigationGroup.Attributes>
+        <ApplicationNavigationLink Command="Microsoft.LightSwitch.Security:/Commands[ScreenCommandShowUsersScreen]"
+                                   Name="UsersScreen" />
+        <ApplicationNavigationLink Command="Microsoft.LightSwitch.Security:/Commands[ScreenCommandShowRolesScreen]"
+                                   Name="RolesScreen" />
+      </ApplicationNavigationGroup>
+    </Application.NavigationItems>
+    <Application.References>
+      <ModuleReference Module="Microsoft.LightSwitch.Security" />
+            <ModuleReference Module="Microsoft.LightSwitch.Extensions" />
+        </Application.References>
+  </Application>
+
+  <EntityContainerGroup Name="DataWorkspace">
+    <EntityContainerGroupProperty EntityContainer="Microsoft.LightSwitch.Security:SecurityDataService"
+                             Name="SecurityDataService">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName Value="Security Data Service" />
+        <Description Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+        <EntityContainerGroupProperty EntityContainer="CMS:ApplicationData"
+                                      Name="ApplicationData" />
+    </EntityContainerGroup>
+    <EntityContainer IsIntrinsic="True"
+                     Name="ApplicationData">
+        <SubmitOperation Name="SaveChanges" />
+        <EntitySet CanDelete="True"
+                   CanInsert="True"
+                   CanUpdate="True"
+                   EntityType="CMS:Category"
+                   Name="Categories" />
+        <QueryOperation Name="Categories_Single"
+                        ReturnType="CMS:Category">
+            <QueryOperation.Attributes>
+                <Generated />
+                <Description Value="Returns the entity whose identity is specified by the parameter(s)." />
+            </QueryOperation.Attributes>
+            <QueryOperation.FilterExpression>
+                <QueryFilterExpressionTree>
+                    <BinaryExpression NodeType="Equal">
+                        <BinaryExpression.Left>
+                            <ChainExpression NodeType="Chain">
+                                <MemberExpression Member="CMS:Category/Properties[Id]"
+                                                  NodeType="MemberAccess" />
+                            </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                            <ParameterExpression NodeType="Parameter"
+                                                 Parameter="CMS:ApplicationData/Members[Categories_Single]/Parameters[Id]" />
+                        </BinaryExpression.Right>
+                    </BinaryExpression>
+                </QueryFilterExpressionTree>
+            </QueryOperation.FilterExpression>
+            <QueryOperation.Source>
+                <QuerySourceExpressionTree>
+                    <MemberExpression Member="CMS:ApplicationData/Members[Categories]"
+                                      NodeType="MemberAccess" />
+                </QuerySourceExpressionTree>
+            </QueryOperation.Source>
+            <QueryOperationParameter Name="Id"
+                                     ParameterType="Microsoft.LightSwitch:Int32?">
+                <QueryOperationParameter.Attributes>
+                    <Description Value="The value of the 'Id' key property of the entity to retrieve." />
+                </QueryOperationParameter.Attributes>
+            </QueryOperationParameter>
+        </QueryOperation>
+        <QueryOperation Name="Categories_SingleOrDefault"
+                        ReturnType="CMS:Category">
+            <QueryOperation.Attributes>
+                <Generated />
+                <Description Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+            </QueryOperation.Attributes>
+            <QueryOperation.FilterExpression>
+                <QueryFilterExpressionTree>
+                    <BinaryExpression NodeType="Equal">
+                        <BinaryExpression.Left>
+                            <ChainExpression NodeType="Chain">
+                                <MemberExpression Member="CMS:Category/Properties[Id]"
+                                                  NodeType="MemberAccess" />
+                            </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                            <ParameterExpression NodeType="Parameter"
+                                                 Parameter="CMS:ApplicationData/Members[Categories_SingleOrDefault]/Parameters[Id]" />
+                        </BinaryExpression.Right>
+                    </BinaryExpression>
+                </QueryFilterExpressionTree>
+            </QueryOperation.FilterExpression>
+            <QueryOperation.Source>
+                <QuerySourceExpressionTree>
+                    <MemberExpression Member="CMS:ApplicationData/Members[Categories]"
+                                      NodeType="MemberAccess" />
+                </QuerySourceExpressionTree>
+            </QueryOperation.Source>
+            <QueryOperationParameter Name="Id"
+                                     ParameterType="Microsoft.LightSwitch:Int32?">
+                <QueryOperationParameter.Attributes>
+                    <Description Value="The value of the 'Id' key property of the entity to retrieve." />
+                </QueryOperationParameter.Attributes>
+            </QueryOperationParameter>
+        </QueryOperation>
+        <QueryOperation Name="Categories_All"
+                        ReturnType="CMS:Category*">
+            <QueryOperation.Attributes>
+                <Generated />
+                <Description Value="Returns all entities contained in the entity set." />
+            </QueryOperation.Attributes>
+            <QueryOperation.Source>
+                <QuerySourceExpressionTree>
+                    <MemberExpression Member="CMS:ApplicationData/Members[Categories]"
+                                      NodeType="MemberAccess" />
+                </QuerySourceExpressionTree>
+            </QueryOperation.Source>
+        </QueryOperation>
+    </EntityContainer>
+    <DataService DataProvider="EntityFrameworkDataProvider"
+                 EntityContainer="CMS:ApplicationData"
+                 Name="ApplicationDataMapping" />
+    <EntityType Name="Category">
+        <EntityType.Methods>
+            <EntityMethod Name="Delete">
+                <EntityMethod.Attributes>
+                    <Generated />
+                </EntityMethod.Attributes>
+            </EntityMethod>
+        </EntityType.Methods>
+        <EntityType.Properties>
+            <KeyProperty Name="Id"
+                         PropertyType="Microsoft.LightSwitch:Int32">
+                <KeyProperty.Attributes>
+                    <Required />
+                    <NotSearchable />
+                </KeyProperty.Attributes>
+            </KeyProperty>
+            <EntityProperty Name="Title"
+                            PropertyType="Microsoft.LightSwitch:String">
+                <EntityProperty.Attributes>
+                    <Required />
+                    <MaxLength Value="255" />
+                </EntityProperty.Attributes>
+            </EntityProperty>
+            <EntityProperty Name="TypeId"
+                            PropertyType="Microsoft.LightSwitch:Int32">
+                <EntityProperty.Attributes>
+                    <Required />
+                    <NotSearchable />
+                </EntityProperty.Attributes>
+            </EntityProperty>
+            <EntityProperty Name="ClientId"
+                            PropertyType="Microsoft.LightSwitch:Int32?">
+                <EntityProperty.Attributes>
+                    <NotSearchable />
+                </EntityProperty.Attributes>
+            </EntityProperty>
+        </EntityType.Properties>
+    </EntityType>
+</ModelFragment>

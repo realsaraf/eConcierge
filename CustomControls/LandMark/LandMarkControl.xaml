@@ -1,0 +1,33 @@
+﻿<Abstract:AnimatableControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:Abstract="clr-namespace:CustomControls.Abstract" 
+			 xmlns:CircularButton="clr-namespace:CustomControls.CircularButton" 
+			 xmlns:CustomControls_InheritedFrameworkControls="clr-namespace:CustomControls.InheritedFrameworkControls" 
+			 x:Class="CustomControls.LandMark.LandMarkControl"
+             Width="762" Height="548"
+                            Background="Transparent" mc:Ignorable="d">
+	<Abstract:AnimatableControl.Resources>
+		
+	</Abstract:AnimatableControl.Resources>
+    
+	<Border x:Name="MainControlBorder" Style="{DynamicResource DialogBorderStyle}" >		
+        
+		<DockPanel>
+			<DockPanel x:Name="titleDock" DockPanel.Dock="Top" Height="71" VerticalAlignment="Top">
+				<TextBlock Margin="46,21,0,8" TextWrapping="Wrap" Text="POINT OF INTEREST" Style="{DynamicResource DialogTitleTextStyle}" />
+				<CircularButton:CircularCloseButtonControl x:Name="closeButton" HorizontalAlignment="Right" Width="58" Margin="0,6.5,17,0" DockPanel.Dock="Right" />
+			</DockPanel>
+			<DockPanel x:Name="controlsDock" DockPanel.Dock="Bottom" Height="86" VerticalAlignment="Top">
+				<CustomControls_InheritedFrameworkControls:TrackBar x:Name="Slider" Minimum="0" Maximum="1" Margin="0,0,0,8" Style="{DynamicResource BlueTouchSliderStyle}" VerticalAlignment="Center" Width="541" />
+			</DockPanel>
+			<DockPanel x:Name="contentDock" DockPanel.Dock="Top" Style="{DynamicResource DialogContentDockStyle}">
+				<ScrollViewer x:Name="contentScroller" Width="{Binding ActualWidth, ElementName=contentDock, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=contentDock, Mode=OneWay}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Hidden" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >
+					<Grid x:Name="grdCategory" HorizontalAlignment="Center" VerticalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden"/>
+				</ScrollViewer>
+			</DockPanel>
+		</DockPanel>
+	</Border>
+</Abstract:AnimatableControl>

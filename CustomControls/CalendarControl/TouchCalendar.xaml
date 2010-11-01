@@ -1,0 +1,109 @@
+﻿<Abstract:AnimatableControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:TFC="clr-namespace:CustomControls.InheritedFrameworkControls"
+             xmlns:Abstract="clr-namespace:CustomControls.Abstract" 
+			 xmlns:CircularButton="clr-namespace:CustomControls.CircularButton"
+			 x:Class="CustomControls.CalendarControl.TouchCalendar"
+             mc:Ignorable="d" 
+             x:Name="CalenderUC">
+    <Abstract:AnimatableControl.Resources>
+        <Style TargetType="{x:Type Label}" x:Key="DayNameStyle">
+        	<Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="./#GILSANUB"/>
+			<Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="CalendarButton"  TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="transparent"/>
+            <Setter Property="Opacity" Value="0.6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <ControlTemplate x:Key="NavigationButtonControlTemplate" TargetType="{x:Type ButtonBase}">
+            <Path Data="M160,160 C160,240 159.5,240.5 159.5,240.5 79.5,200.5 78.5,199.5 78.5,199.5 159.5,159.5 160,160 160,160 z" HorizontalAlignment="Left"  Stretch="Fill"
+    							Stroke="#FFABABAB" Width="15" Height="23" Margin="5" VerticalAlignment="Center" >
+                            	<Path.Fill>
+                            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            			<GradientStop Color="White" Offset="0"/>
+                            			<GradientStop Color="White" Offset="1"/>
+                            		</LinearGradientBrush>
+                            	</Path.Fill>
+                            </Path>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsKeyboardFocused" Value="True"/>
+                <Trigger Property="ToggleButton.IsChecked" Value="True"/>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Foreground" Value="#FFADADAD"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="NavigationCenterButtonControlTemplate" TargetType="{x:Type ButtonBase}">
+        	<ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        	<ControlTemplate.Triggers>
+        		<Trigger Property="IsKeyboardFocused" Value="True"/>
+        		<Trigger Property="ToggleButton.IsChecked" Value="True"/>
+        		<Trigger Property="IsEnabled" Value="False">
+        			<Setter Property="Foreground" Value="#FFADADAD"/>
+        		</Trigger>
+        	</ControlTemplate.Triggers>
+        </ControlTemplate>
+
+    </Abstract:AnimatableControl.Resources>
+
+    <Grid  RenderTransformOrigin="0.5,0.5" Background="Transparent">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Border x:Name="border"  Style="{DynamicResource DialogBorderStyle}">
+            <StackPanel Margin="30,35">
+        		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,5">
+        			<TFC:TouchButton x:Name="btnLeft"  Click="BtnLeftClick" Style="{StaticResource CalendarButton}" Template="{DynamicResource NavigationButtonControlTemplate}" Opacity="0.9"  />
+        			<TFC:TouchButton x:Name="btnState" Height="40" FontFamily="./#MOUSE DECO"  FontSize="32"  Style="{StaticResource CalendarButton}"
+        				VerticalContentAlignment="Top" VerticalAlignment="Top" Click="BtnStateClick" Template="{DynamicResource NavigationCenterButtonControlTemplate}" Opacity="0.9" />
+        			<TFC:TouchButton x:Name="btnRight"  Click="BtnRightClick" Width="25" Style="{StaticResource CalendarButton}" Template="{DynamicResource NavigationButtonControlTemplate}" RenderTransformOrigin="0.5,0.5" Opacity="0.9">
+        				<TFC:TouchButton.LayoutTransform>
+        					<TransformGroup>
+        						<ScaleTransform ScaleY="1" ScaleX="-1"/>
+        						<SkewTransform AngleY="0" AngleX="0"/>
+        						<RotateTransform Angle="0"/>
+        						<TranslateTransform/>
+        					</TransformGroup>
+        				</TFC:TouchButton.LayoutTransform>
+        			</TFC:TouchButton>
+        		</StackPanel>
+        		<StackPanel Orientation="Horizontal" x:Name="stkDayName">
+        			<Label Content="SUNDAY" Style="{DynamicResource DayNameStyle}" x:Name="Sunday" />
+        			<Label Content="MONDAY" Style="{DynamicResource DayNameStyle}" Width="{Binding Width, ElementName=Sunday}"
+        				FontSize="{Binding FontSize, ElementName=Sunday}" />
+        			<Label Content="TUESDAY" Style="{DynamicResource DayNameStyle}" Width="{Binding Width, ElementName=Sunday}"
+        				FontSize="{Binding FontSize, ElementName=Sunday}"/>
+        			<Label Content="WEDNESDAY" Style="{DynamicResource DayNameStyle}" Width="{Binding Width, ElementName=Sunday}"
+        				FontSize="{Binding FontSize, ElementName=Sunday}" />
+        			<Label Content="THURSDAY" Style="{DynamicResource DayNameStyle}" Width="{Binding Width, ElementName=Sunday}"
+        				FontSize="{Binding FontSize, ElementName=Sunday}" />
+        			<Label Content="FRIDAY" Style="{DynamicResource DayNameStyle}" Width="{Binding Width, ElementName=Sunday}"
+        				FontSize="{Binding FontSize, ElementName=Sunday}"/>
+        			<Label Content="SATURDAY" Style="{DynamicResource DayNameStyle}" Width="{Binding Width, ElementName=Sunday}"
+        				FontSize="{Binding FontSize, ElementName=Sunday}"/>
+        		</StackPanel>
+        		<Border x:Name="dateBorder" MinWidth="30" MinHeight="30" CornerRadius="0" VerticalAlignment="Center" BorderBrush="White" BorderThickness="1" >
+        			<Grid x:Name="grd" VerticalAlignment="Center" HorizontalAlignment="Center">        				
+					</Grid>
+        		</Border>
+        	</StackPanel>
+        </Border>
+        <CircularButton:CircularCloseButtonControl x:Name="closeButton" HorizontalAlignment="Right" Margin="0,14.5,21,0" VerticalAlignment="Top" Width="58" Height="58"/>
+    </Grid>
+</Abstract:AnimatableControl>

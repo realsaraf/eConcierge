@@ -1,0 +1,560 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using CustomControls;
+using CustomControls.HotelVideoControl;
+using CustomControls.MapControl;
+using Helpers;
+using Infrasturcture.TouchLibrary;
+using TouchControls;
+using TouchFramework;
+using TouchFramework.Containers;
+using TouchFramework.Events;
+using Brush = System.Windows.Media.Brush;
+using Brushes = System.Windows.Media.Brushes;
+using Color = System.Windows.Media.Color;
+using ColorConverter = System.Drawing.ColorConverter;
+using Image = System.Windows.Controls.Image;
+using Path = System.IO.Path;
+using Point = System.Windows.Point;
+using Rectangle = System.Windows.Shapes.Rectangle;
+using Touch = TouchFramework.Touch;
+using TouchAction = TouchFramework.TouchAction;
+
+namespace mConcierge
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        #region Properties
+
+        private const int MAX_ITEMS = 50;
+        private static readonly Random randomGen = new Random();
+        private readonly double screen_height = SystemParameters.PrimaryScreenHeight;
+        private readonly double screen_width = SystemParameters.PrimaryScreenWidth;
+        private Image closebutton;
+
+        private TrackingHelper.TrackingType currentTrackingType = TrackingHelper.TrackingType.TUIO;
+        private FrameworkControl framework;
+
+        private bool fullscreen = true;
+        private int numItems;
+        private Dictionary<int, UIElement> points = new Dictionary<int, UIElement>();
+        private double window_height = 480;
+        private double window_left;
+        private double window_top;
+        private double window_width = 640;
+
+        #endregion
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            InitializeTouchFramework();
+            InitializeCanvas();
+            //LoadMyPictures();
+            PosAll();
+            LoadToolDock();
+            CreateCloseButton();
+        }
+
+        private void LoadToolDock()
+        {
+            var rectangle = new Rectangle
+                                {
+                                    VerticalAlignment = VerticalAlignment.Bottom,
+                                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                                    Fill = FindResource("DockToolBGBrush") as Brush,
+                                    Height = 105,
+                                    Width = Width
+                                };
+            Canvas.SetZIndex(rectangle, 100000);
+            Canvas.SetTop(rectangle, Height - 105);
+            canvas1.Children.Add(rectangle);
+
+            for (int i = 1; i <= 6; i++)
+            {
+                var radioButton = new RadioButton
+                                       {
+                                           Width = 90,
+                                           Height = 90,
+                                           GroupName = "Tools",
+                                           Style = FindResource("ToolRadioStyle") as Style,
+                                           Tag = Constants.Tools.ToolTags[6 - i],
+                                       };
+                radioButton.Unchecked += radioButton_Unchecked;
+                Canvas.SetTop(radioButton, Height - 120);
+                Canvas.SetLeft(radioButton, Width - i * 180);
+                Canvas.SetZIndex(radioButton, 100001);
+                canvas1.Children.Add(radioButton);
+                var prop = new ElementProperties();
+                prop.ElementSupport.AddSupport(TouchAction.Tap);
+                radioButton.AddHandler(MTEvents.TouchDownEvent, new RoutedEventHandler(ToolTapEvent));
+                var cont = new MTSmoothContainerRev(radioButton, canvas1, prop);
+                framework.RegisterElement(cont);
+            }
+
+            var mConciergeButton = new RadioButton
+            {
+                Width = 301,
+                Height = 142,
+                GroupName = "Tools",
+                Style = FindResource("mConciergeOptionStyle") as Style,
+                Tag = "mConcierge"
+            };
+            mConciergeButton.Unchecked += radioButton_Unchecked;
+            Canvas.SetTop(mConciergeButton, Height - 160);
+            Canvas.SetLeft(mConciergeButton, 40);
+            Canvas.SetZIndex(mConciergeButton, 100001);
+            canvas1.Children.Add(mConciergeButton);
+            var prop1 = new ElementProperties();
+            prop1.ElementSupport.AddSupport(TouchAction.Tap);
+            mConciergeButton.AddHandler(MTEvents.TouchDownEvent, new RoutedEventHandler(ToolTapEvent));
+            var cont1 = new MTSmoothContainerRev(mConciergeButton, canvas1, prop1);
+            framework.RegisterElement(cont1);
+
+
+        }
+
+        void radioButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            var radioButton = sender as RadioButton;
+            switch (radioButton.Tag.ToString())
+            {
+                case "mConcierge":
+                    var hotelExplorer = HotelExplorer.GetInstance();
+                    if (hotelExplorer.CurrentDisplayedControl != null)
+                    {
+                        RemoveControl(hotelExplorer.CurrentDisplayedControl);
+                    }
+                    RemoveControl(hotelExplorer.TourVideoOption);
+                    RemoveControl(hotelExplorer.AccomodationsOption);
+                    RemoveControl(hotelExplorer.HotelMapOption);
+                    RemoveControl(hotelExplorer.PhotoGalleryOption);
+                    RemoveControl(hotelExplorer);
+                    break;
+                case "Transportation":
+                    break;
+                case "Navigation":
+                    RemoveControl(MapControl.GetInstance());
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void ToolTapEvent(object sender, RoutedEventArgs e)
+        {
+            var radio = sender as RadioButton;
+            if (radio == null) return;
+            radio.RaiseEvent(new RoutedEventArgs(RadioButton.ClickEvent));
+            if ((bool)(!radio.IsChecked))
+            {
+                switch (radio.Tag.ToString())
+                {
+                    case "mConcierge":
+                        ShowHotelExplorer();
+                        break;
+                    case "Transportation":
+                        break;
+                    case "Navigation":
+                        ShowHotelMap();
+                        break;
+                    case "Calendar":
+                        LoadAllImages(@"D:\DOCUMENTS\SEMINAR\The future is touchable\pictures");
+                        PosAll();
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void ShowHotelIntroVideo()
+        {
+            var hotelVideoControl = HotelVideoControl.GetInstance();
+            if (hotelVideoControl.IsDisplayed) return;
+            hotelVideoControl.Opacity = 0;
+            hotelVideoControl.SetVideo(Directory.GetCurrentDirectory() + "\\videos\\sample.flv");
+            Canvas.SetTop(hotelVideoControl, (Height / 2) - 400);
+            Canvas.SetLeft(hotelVideoControl, 200);
+            Canvas.SetZIndex(hotelVideoControl, 100001);
+            canvas1.Children.Add(hotelVideoControl);
+            RegisterElement(hotelVideoControl, false, new[] { TouchAction.Tap });
+            RegisterElement(hotelVideoControl.TrackBar, false, new[] { TouchAction.Slide, TouchAction.Tap });
+        }
+
+        private void ShowHotelExplorer()
+        {
+            var hotelExplorer = HotelExplorer.GetInstance();
+            if (hotelExplorer.IsDisplayed) return;
+            Canvas.SetTop(hotelExplorer, (Height / 2) - 400);
+            Canvas.SetLeft(hotelExplorer, (Width / 2) - 400);
+            Canvas.SetZIndex(hotelExplorer, 100001);
+            canvas1.Children.Add(hotelExplorer);
+
+            hotelExplorer.OptionClicked += HotelExplorerOptionClicked;
+            hotelExplorer.OnDoAnimateToOrigin += HotelExplorerOnDoAnimateToOrigin;
+            RegisterElement(hotelExplorer, false, new[] { TouchAction.Tap });
+            RegisterElement(hotelExplorer.TourVideoOption, true, new[] { TouchAction.Tap });
+            RegisterElement(hotelExplorer.AccomodationsOption, true, new[] { TouchAction.Tap });
+            RegisterElement(hotelExplorer.HotelMapOption, true, new[] { TouchAction.Tap });
+            RegisterElement(hotelExplorer.PhotoGalleryOption, true, new[] { TouchAction.Tap });
+
+        }
+
+        void HotelExplorerOnDoAnimateToOrigin(object sender, EventArgs e)
+        {
+            AnimateHotelExplorer(true);
+            var hotelVideoControl = HotelVideoControl.GetInstance();
+            if (hotelVideoControl.IsDisplayed)
+            {
+                framework.UnregisterElement(hotelVideoControl.TrackBar.Container.Id);
+                framework.ForceRefresh();
+                hotelVideoControl.IsDisplayed = false;
+                RemoveControl(hotelVideoControl);
+                canvas1.Children.Remove(HotelExplorer.GetInstance().Connector);
+            }
+        }
+
+        private void RemoveControl(IMTouchControl control)
+        {
+            control.IsDisplayed = false;
+            canvas1.Children.Remove((FrameworkElement)control);
+            framework.UnregisterElement(control.Container.Id);
+            framework.ForceRefresh();
+        }
+
+        void HotelExplorerOptionClicked(object sender, EventArgs e)
+        {
+            var control = sender as RadioButton;
+            switch (control.Tag.ToString())
+            {
+                case "TourVideo":
+                    AnimateHotelExplorer(false);
+                    ShowHotelIntroVideo();
+                    AnimateHotelIntroVideo();
+                    HotelExplorer.GetInstance().CurrentDisplayedControl = HotelVideoControl.GetInstance();
+                    break;
+                case "Accomodations":
+                    break;
+                case "HotelMap":
+                    ShowHotelMap();
+                    break;
+                case "PhotoGallery":
+                    break;
+            }
+        }
+
+        private void ShowHotelMap()
+        {
+            var mapControl = MapControl.GetInstance();
+            if (mapControl.IsDisplayed) return;
+            double size = 700;
+            mapControl.Width = mapControl.Height = size;
+            Canvas.SetTop(mapControl, 30);
+            Canvas.SetLeft(mapControl, (Width / 2) - (size / 2));
+            Canvas.SetZIndex(mapControl, 100001);
+            canvas1.Children.Add(mapControl);
+            RegisterElement(mapControl, true, new[] { TouchAction.Tap });
+        }
+
+        private void AnimateHotelIntroVideo()
+        {
+            var hotelExplorer = HotelExplorer.GetInstance();
+            if (hotelExplorer != null)
+            {
+                AnimationHelper.FadeInHotelIntroVideo();
+            }
+        }
+
+        private void AnimateHotelExplorer(bool restore)
+        {
+            var hotelExplorer = HotelExplorer.GetInstance();
+            if (hotelExplorer != null)
+            {
+                AnimationHelper.ParkHotelExplorer(restore, canvas1.ActualWidth, canvas1);
+            }
+        }
+
+        private void RegisterElement(IMTouchControl control, bool supportAllTouches, TouchAction[] touchActions)
+        {
+            var prop = new ElementProperties();
+            if (!supportAllTouches)
+            {
+                foreach (var touchAction in touchActions)
+                {
+                    prop.ElementSupport.AddSupport(touchAction);
+                }
+            }
+            else
+                prop.ElementSupport.AddSupportForAll();
+
+            var cont = new MTSmoothMediatorContainer((FrameworkElement)control, canvas1, prop);
+            control.Container = cont;
+            framework.RegisterElement(cont);
+            control.IsDisplayed = true;
+        }
+
+        private void CreateCloseButton()
+        {
+            var i = new Image();
+            BitmapSource bi = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + "\\images\\red_x.png"));
+            i.Source = bi;
+            Canvas.SetLeft(i, Width - 50);
+            canvas1.Children.Add(i);
+            var prop = new ElementProperties();
+            prop.ElementSupport.AddSupport(TouchAction.None);
+            var cont = new MTSmoothContainerRev(i, canvas1, prop);
+            framework.RegisterElement(cont);
+            i.AddHandler(MTEvents.TouchDownEvent, new RoutedEventHandler(ShutdownEvent));
+        }
+
+        private void InitializeTouchFramework()
+        {
+            //Mouse.OverrideCursor = Cursors.None;
+            framework = TrackingHelper.GetTracking(canvas1, currentTrackingType);
+            framework.OnProcessUpdates += DisplayPoints;
+            framework.Start();
+            framework.ForceRefresh();
+        }
+
+        private void InitializeCanvas()
+        {
+            toggleFullscreen();
+            canvas1.Width = Width;
+            canvas1.Height = Height;
+            canvas1.Background = new ImageBrush(new BitmapImage(new Uri(Directory.GetCurrentDirectory() + "\\images\\bg.jpg"))); //Brushes.LightSteelBlue;
+
+            SliderCanvas.Width = Width / 2;
+            SliderCanvas.Height = Height;
+            SliderCanvas.Background = Brushes.Black;
+        }
+
+        private void LoadMyPictures()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            LoadAllImages(path);
+        }
+
+        private void LoadAllImages(string folderName)
+        {
+            string[] fileNames = Directory.GetFiles(folderName);
+
+            foreach (string fileName in fileNames)
+            {
+                if (IsImageExt(Path.GetExtension(fileName)))
+                {
+                    if (numItems > MAX_ITEMS) break;
+                    AddPhoto(fileName);
+                    numItems++;
+                }
+            }
+        }
+
+        private void AddPhoto(string filePath)
+        {
+            var p = new PictureControl();
+            Rectangle i = p.SetImage(filePath);
+
+            //RegisterPictureEvents(p);
+
+            RenderOptions.SetBitmapScalingMode(i, BitmapScalingMode.HighQuality);
+
+            var prop = new ElementProperties();
+            prop.ElementSupport.AddSupportForAll();
+
+            MTContainer cont = new MTSmoothContainerRev(p, canvas1, prop);
+            framework.RegisterElement(cont);
+            p.Container = cont;
+            canvas1.Children.Add(p);
+            cont.MaxX = (int)(screen_width);
+            cont.MaxY = (int)(screen_height);
+            cont.MinX = (int)(screen_width / 10);
+            cont.MinY = (int)(screen_height / 10);
+        }
+
+        private static bool IsImageExt(string ext)
+        {
+            string[] exts = { ".jpg", ".png", ".gif", ".tiff", ".bmp", ".jpeg" };
+            return exts.Contains(ext.ToLower());
+        }
+
+        private void PosAll()
+        {
+            foreach (MTContainer cont in framework.Assigner.Elements.Values)
+            {
+                if(cont.WorkingObject is RadioButton) continue;
+                int difX = canvas1.ActualWidth > 200 ? 200 : 0;
+                int difY = canvas1.ActualWidth > 200 ? 200 : 0;
+
+                int x = randomGen.Next(0, (int)canvas1.ActualWidth - difX);
+                int y = randomGen.Next(0, (int)canvas1.ActualHeight - difY);
+
+                Canvas.SetTop(cont.WorkingObject, y);
+                Canvas.SetLeft(cont.WorkingObject, x);
+                cont.Reset();
+                cont.StartX = x;
+                cont.StartY = y;
+            }
+        }
+
+        private void ShutdownEvent(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void toggleFullscreen()
+        {
+            switchFullScreen();
+        }
+
+        private void switchWindowed()
+        {
+            WindowState = WindowState.Normal;
+            WindowStyle = WindowStyle.SingleBorderWindow;
+            Left = window_left;
+            Top = window_top;
+            Width = window_width;
+            Height = window_height;
+
+            canvas1.Width = window_width;
+            canvas1.Height = window_height;
+
+            SliderCanvas.Width = window_width;
+            SliderCanvas.Height = window_height;
+
+            fullscreen = false;
+        }
+
+        private void switchFullScreen()
+        {
+            window_left = Left;
+            window_top = Top;
+
+
+            Width = screen_width;
+            Height = screen_height;
+
+            window_width = Width;
+            window_height = Height;
+
+            Left = 0;
+            Top = 0;
+            ResizeMode = ResizeMode.NoResize;
+            WindowStyle = WindowStyle.None;
+
+            canvas1.Width = screen_width;
+            canvas1.Height = screen_height;
+
+            SliderCanvas.Width = screen_width;
+            SliderCanvas.Height = screen_height;
+
+            fullscreen = true;
+        }
+
+        #region DisplaPoints
+
+        private void DisplayPoints()
+        {
+            foreach (int i in points.Keys)
+            {
+                if (!framework.AllTouches.Keys.Contains(i)) canvas1.Children.Remove(points[i]);
+            }
+            foreach (Touch te in framework.AllTouches.Values)
+            {
+                DisplayPoint(te.TouchId, te.TouchPoint);
+            }
+        }
+
+        /// <summary>
+        /// Goes through and removes all points from the screen.  I.e. all elipses created to represent touch points.
+        /// </summary>
+        private void RemovePoints()
+        {
+            foreach (UIElement e in points.Values)
+            {
+                canvas1.Children.Remove(e);
+            }
+            points = new Dictionary<int, UIElement>();
+        }
+
+        /// <summary>
+        /// Displays a point on the screen in the specified location, with the specified colour.
+        /// </summary>
+        /// <param name="id">Id of the point.</param>
+        /// <param name="p">Position of the point in screen coordinates.</param>
+        private void DisplayPoint(int id, PointF p)
+        {
+            DisplayPoint(id, p, Colors.White);
+        }
+
+        /// <summary>
+        /// Displays a point on the screen in the specified location, with the specified colour.
+        /// </summary>
+        /// <param name="id">Id of the point.</param>
+        /// <param name="p">Position of the point in screen coordinates.</param>
+        /// <param name="brushColor">The brush to use for the elipse.</param>
+        private void DisplayPoint(int id, PointF p, Color brushColor)
+        {
+            Ellipse e = null;
+            if (points.ContainsKey(id))
+            {
+                e = points[id] as Ellipse;
+                e.RenderTransform = new TranslateTransform(p.X - 13, p.Y - 13);
+            }
+
+            if (e == null)
+            {
+                e = new Ellipse();
+
+                var radialGradient = new RadialGradientBrush
+                                         {
+                                             GradientOrigin = new Point(0.5, 0.5),
+                                             Center = new Point(0.5, 0.5),
+                                             RadiusX = 0.5,
+                                             RadiusY = 0.5
+                                         };
+
+                Color shadow = Colors.Black;
+                shadow.A = 30;
+                radialGradient.GradientStops.Add(new GradientStop(shadow, 0.9));
+                brushColor.A = 60;
+                radialGradient.GradientStops.Add(new GradientStop(brushColor, 0.8));
+                brushColor.A = 150;
+                radialGradient.GradientStops.Add(new GradientStop(brushColor, 0.1));
+
+                radialGradient.Freeze();
+
+                e.Height = 26.0;
+                e.Width = 26.0;
+                e.Fill = radialGradient;
+
+                int eZ = framework.MaxZIndex + 100;
+                e.IsHitTestVisible = false;
+                e.RenderTransform = new TranslateTransform(p.X - 13, p.Y - 13);
+                canvas1.Children.Add(e);
+                Panel.SetZIndex(e, eZ < 200000 ? 200000 : eZ);
+                points.Add(id, e);
+            }
+        }
+
+        #endregion
+    }
+}

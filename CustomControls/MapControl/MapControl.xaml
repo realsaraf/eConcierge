@@ -1,0 +1,139 @@
+﻿<Abstract:AnimatableControl
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:VE="clr-namespace:InfoStrat.VE;assembly=InfoStrat.VE" 
+             xmlns:MapControl="clr-namespace:CustomControls.MapControl" 
+             xmlns:Converters="clr-namespace:Helpers.Converters;assembly=Helpers" 
+			 xmlns:Abstract="clr-namespace:CustomControls.Abstract" 
+			 xmlns:Circular="clr-namespace:CustomControls.CircularButton" 
+			 xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="CustomControls.MapControl.MapControl" 
+			 MinWidth="610" MinHeight="610" Background="Transparent">
+    <Abstract:AnimatableControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+            	<ResourceDictionary Source="../Resources/MapStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Converters:SubtractValueConverter x:Key="SubtractValueConverter"/>
+            <Converters:MapCenterConverter x:Key="MapCenterConverter"/>
+            <Converters:HalfValueConverter x:Key="HalfValueConverter"/>
+        	<Style x:Key="MapPushPinStyle" TargetType="{x:Type VE:VEPushPin}">
+        		<Setter Property="Template">
+        			<Setter.Value>
+        				<ControlTemplate TargetType="{x:Type VE:VEPushPin}">
+        					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" Height="{TemplateBinding Height}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True" VerticalAlignment="Stretch" Width="{TemplateBinding Width}">
+        						<StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+        							<Border BorderBrush="{x:Null}" BorderThickness="3" CornerRadius="4" HorizontalAlignment="Center" Margin="0" Padding="0" SnapsToDevicePixels="True">
+        								<Button x:Name="PART_button_Copy" BorderThickness="0" Background="{x:Null}" Focusable="False" FontSize="12" HorizontalAlignment="Center" Margin="-1" Padding="8" SnapsToDevicePixels="True" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="Red" Style="{DynamicResource ButtonStyle}">
+        									<ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
+        								</Button>
+        							</Border>
+        						</StackPanel>
+        					</Border>
+        				</ControlTemplate>
+        			</Setter.Value>
+        		</Setter>
+        	</Style>
+        	<Style x:Key="ButtonFocusVisual">
+        		<Setter Property="Control.Template">
+        			<Setter.Value>
+        				<ControlTemplate>
+        					<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+        				</ControlTemplate>
+        			</Setter.Value>
+        		</Setter>
+        	</Style>
+        	<LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+        		<GradientStop Color="#F3F3F3" Offset="0"/>
+        		<GradientStop Color="#EBEBEB" Offset="0.5"/>
+        		<GradientStop Color="#DDDDDD" Offset="0.5"/>
+        		<GradientStop Color="#CDCDCD" Offset="1"/>
+        	</LinearGradientBrush>
+        	<SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+        	<Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+        		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+        		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+        		<Setter Property="BorderThickness" Value="1"/>
+        		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+        		<Setter Property="VerticalContentAlignment" Value="Center"/>
+        		<Setter Property="Padding" Value="1"/>
+        		<Setter Property="Template">
+        			<Setter.Value>
+        				<ControlTemplate TargetType="{x:Type Button}">
+        					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        					<ControlTemplate.Triggers>
+        						<Trigger Property="IsKeyboardFocused" Value="true"/>
+        						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
+        						<Trigger Property="IsEnabled" Value="false">
+        							<Setter Property="Foreground" Value="#ADADAD"/>
+        						</Trigger>
+        					</ControlTemplate.Triggers>
+        				</ControlTemplate>
+        			</Setter.Value>
+        		</Setter>
+        	</Style>
+        </ResourceDictionary>
+        </Abstract:AnimatableControl.Resources>
+
+    <Grid Tag="MainMapBorder">      
+        
+        <Border CornerRadius="{Binding ActualWidth, ConverterParameter=2, Converter={StaticResource HalfValueConverter}, ElementName=UserControl, Mode=Default}">
+        	<Grid x:Name="menu" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, ElementName=UserControl, Mode=Default}"
+                  Height="{Binding ActualHeight, ElementName=UserControl, Mode=Default}">
+        		<Ellipse x:Name="ellipse" Width="{Binding ActualWidth, ElementName=menu}" Height="{Binding ActualHeight, ElementName=menu}"
+        			HorizontalAlignment="Center" 
+        			VerticalAlignment="Center" />
+
+        		<Ellipse Width="{Binding ActualWidth, ConverterParameter=140, Converter={StaticResource SubtractValueConverter}, ElementName=ellipse, Mode=Default}" 
+                         Height="{Binding ActualHeight, ConverterParameter=140, Converter={StaticResource SubtractValueConverter}, ElementName=ellipse, Mode=Default}" Margin="0"
+        			HorizontalAlignment="Center" 
+        			VerticalAlignment="Center" >
+        			<Ellipse.Fill>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Color="#FF585757" Offset="0"/>
+        					<GradientStop Color="White" Offset="1"/>
+        				</LinearGradientBrush>
+        			</Ellipse.Fill>
+        		</Ellipse>
+								                
+        	</Grid>
+        </Border>
+
+        <Grid x:Name="mainGrid" Width="{Binding ActualWidth, ConverterParameter=123, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" 
+              Height="{Binding ActualHeight, ConverterParameter=123, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}">
+            <Ellipse Width="{Binding ActualWidth, ConverterParameter=123, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" 
+                     Height="{Binding ActualHeight, ConverterParameter=123, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" Margin="0"
+	 			HorizontalAlignment="Center" 
+	 			VerticalAlignment="Center" />
+
+            <Ellipse Width="{Binding ActualWidth, ConverterParameter=144, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" 
+                     Height="{Binding ActualHeight, ConverterParameter=144, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}"  Margin="0"
+	 			HorizontalAlignment="Center" 
+	 			VerticalAlignment="Center" />
+
+            <Ellipse x:Name="mapFrame" Width="{Binding ActualWidth, ConverterParameter=146, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" 
+                     Height="{Binding ActualHeight, ConverterParameter=146, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}"  Margin="0"
+	 			HorizontalAlignment="Center" 
+	 			VerticalAlignment="Center" 
+	 			Fill="White" />
+
+            <Ellipse Width="{Binding ActualWidth, ConverterParameter=150, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" 
+                     Height="{Binding ActualHeight, ConverterParameter=150, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}"  Margin="0"
+	 			HorizontalAlignment="Center" 
+	 			VerticalAlignment="Center" 
+	 			Fill="White" />
+            <VE:VEMap x:Name="veMap" Width="{Binding ActualWidth, ConverterParameter=-160, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" 
+			Height="{Binding ActualHeight, ConverterParameter=-160, Converter={StaticResource SubtractValueConverter}, ElementName=menu, Mode=Default}" 
+			HorizontalAlignment="Center" VerticalAlignment="Center" Altitude="10579999" Foreground="White">
+                <VE:VEMap.Clip>
+                    <EllipseGeometry Center="{Binding ActualWidth, Converter={StaticResource MapCenterConverter}, ElementName=menu, Mode=Default}"  
+					RadiusX="{Binding ActualWidth, ConverterParameter=2, Converter={StaticResource HalfValueConverter}, ElementName=mapFrame, Mode=Default}" 
+					RadiusY="{Binding ActualWidth, ConverterParameter=2, Converter={StaticResource HalfValueConverter}, ElementName=mapFrame, Mode=Default}" />
+                </VE:VEMap.Clip>
+            </VE:VEMap>
+        </Grid>
+        <Circular:CircularLockToggleButton x:Name="lockButton" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,46,0,0" />
+        <Circular:CircularLockToggleButton x:Name="menuButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,43" />
+    </Grid>
+</Abstract:AnimatableControl>

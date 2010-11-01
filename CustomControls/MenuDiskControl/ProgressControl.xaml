@@ -1,0 +1,36 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="CustomControls.MenuDiskControl.ProgressControl"
+	x:Name="UserControl"
+	Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Width="40" Visibility="Hidden"    
+    RenderTransformOrigin="0.5,0.5">
+    <UserControl.Resources>
+        <Storyboard x:Key="spinStoryBoard" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="BrushRotation" Storyboard.TargetProperty="Angle">
+                <SplineDoubleKeyFrame KeyTime="00:00:02" Value="720"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+	<Ellipse 
+     Fill="{x:Null}" StrokeThickness="10" StrokeDashArray="0 1.4" StrokeDashCap="Round"    >		
+    <Ellipse.Stroke>
+        <RadialGradientBrush GradientOrigin="0.897,0.504" Center="0.897,0.504">
+	    <RadialGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform x:Name="BrushRotation" CenterX="0.5" CenterY="0.5" Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+                <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                <GradientStop Color="#00FFFFFF" Offset="1"/>
+            </RadialGradientBrush>
+    </Ellipse.Stroke>
+</Ellipse>
+</UserControl>

@@ -1,0 +1,418 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:MenuDiskControl="clr-namespace:CustomControls.MenuDiskControl" 
+    xmlns:Converters="clr-namespace:Helpers.Converters;assembly=Helpers" mc:Ignorable="d"
+	x:Class="CustomControls.MenuDiskControl.MenuDiskControl"
+	x:Name="UserControl" Width="Auto" Height="Auto"
+    Background="Transparent">
+    <UserControl.Resources>
+        <Converters:HalfValueConverter x:Key="HalfValueConverter"/>
+        <Converters:MultiplyValueConverter x:Key="MultiplyValueConverter" />
+        <Style x:Key="ShareButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Path x:Name="path"  StrokeThickness="1" Fill="{TemplateBinding Background}" Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Data="M160.18424,79.648806 C160.68412,116.1488 160.03101,195.99309 160.03101,195.99309 271.94834,196.4931 355.1539,273.36313 356.90094,363.81521 356.90094,363.81521 496.05782,363.80713 496.05782,363.80713 495.78139,196.99171 339.91837,78.192185 160.18424,79.648806 z" HorizontalAlignment="Right" VerticalAlignment="Top" Width="287.736" Height="285.659" Margin="0,0.946,-0.861,0"/>
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="path" Property="StrokeThickness" Value="3" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="path" Property="StrokeThickness" Value="4" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ExteriorTopRightButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Path x:Name="path"  StrokeThickness="1" Fill="{TemplateBinding Background}" Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" Data="M327.64501,77.064524 C328.14489,113.56452 328.16632,187.5 328.16632,187.5 359.82498,187.50078 386.48554,213.83375 386.15301,243.5 386.15301,243.5 495.96045,243.5 495.96045,243.5 495.71051,155.56372 422.24825,76.918702 327.64501,77.064524 z" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="path" Property="StrokeThickness" Value="3" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="path" Property="StrokeThickness" Value="4" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CurcularButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Path HorizontalAlignment="Center" x:Name="path" VerticalAlignment="Center" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Fill="{TemplateBinding Background}" Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="1">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure IsClosed="True" StartPoint="149,17.5">
+                                            <BezierSegment Point1="149,26.8888407471235" Point2="115.757142674936,34.5" Point3="74.75,34.5" IsSmoothJoin="True"/>
+                                            <BezierSegment Point1="33.7428573250636,34.5" Point2="0.5,26.8888407471235" Point3="0.5,17.5" IsSmoothJoin="True"/>
+                                            <BezierSegment Point1="0.5,8.11115925287651" Point2="33.7428573250636,0.5" Point3="74.75,0.5" IsSmoothJoin="True"/>
+                                            <BezierSegment Point1="115.757142674936,0.5" Point2="149,8.11115925287651" Point3="149,17.5" IsSmoothJoin="True"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="path" Property="StrokeThickness" Value="3" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="path" Property="StrokeThickness" Value="4" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="ShareHideButtonMouseDown">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ShareButtonMouseDown">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CommandButtonMouseDown">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="CommandButton" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="CommandButton" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UserControl" Storyboard.TargetProperty="(FrameworkElement.Width)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="55"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="337.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UserControl" Storyboard.TargetProperty="(FrameworkElement.Height)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="55"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="337.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UserControl" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="00:00:00" Value="-27.5"/>
+                <SplineThicknessKeyFrame KeyTime="00:00:00.6000000" Value="-168.25"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MenuButtonMouseDown">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="shareGrid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="CommandButton" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="CommandButton" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UserControl" Storyboard.TargetProperty="(FrameworkElement.Width)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="337.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="55"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UserControl" Storyboard.TargetProperty="(FrameworkElement.Height)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="337.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="55"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UserControl" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="00:00:00" Value="-168.25"/>
+                <SplineThicknessKeyFrame KeyTime="00:00:00.6000000" Value="-27.5"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="MenuButton">
+            <BeginStoryboard x:Name="MenuButtonMouseDown_BeginStoryboard" Storyboard="{StaticResource MenuButtonMouseDown}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="CommandButton">
+            <BeginStoryboard Storyboard="{StaticResource CommandButtonMouseDown}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="EmailButton">
+            <BeginStoryboard Storyboard="{StaticResource ShareButtonMouseDown}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid x:Name="LayoutRoot" Width="{Binding ActualWidth, ElementName=UserControl, Mode=Default}" Height="{Binding ActualHeight, ElementName=UserControl, Mode=Default}">
+        <Grid x:Name="shareGrid" Opacity="0" Width="{Binding ActualWidth, Converter={StaticResource MultiplyValueConverter}, ConverterParameter=1.7, ElementName=UserControl, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource MultiplyValueConverter}, ConverterParameter=1.7, ElementName=UserControl, Mode=Default}" RenderTransformOrigin="0.5,0.5" Margin="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=-2, ElementName=shareGrid, Mode=Default}">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0" ScaleY="0"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Button x:Name="FacebookButton" Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" Style="{DynamicResource ShareButtonStyle}" VerticalAlignment="Top" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.5,0.5" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=5, ElementName=FacebookButton, Mode=Default}" Margin="0" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2.8, ElementName=FacebookButton, Mode=Default}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="49"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <MenuDiskControl:ProgressControl x:Name="FacebookProgress" Width="40" Height="40"/>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Facebook" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                        <Image Source="Images\facebook.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+            <Button x:Name="FlickrButton" Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" Style="{DynamicResource ShareButtonStyle}" VerticalAlignment="Bottom" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" HorizontalAlignment="Right" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="-1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=5, ElementName=FlickrButton, Mode=Default}" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2.8, ElementName=FlickrButton, Mode=Default}" Margin="0">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="-131"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <MenuDiskControl:ProgressControl x:Name="FlickrProgress" Width="40" Height="40"/>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Flickr" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                        <Image Source="Images\flickr.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+            <Button x:Name="TwitterButton"  Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" Style="{DynamicResource ShareButtonStyle}" VerticalAlignment="Top" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2.8, ElementName=TwitterButton, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=5, ElementName=TwitterButton, Mode=Default}" Margin="0">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="49"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <MenuDiskControl:ProgressControl x:Name="TwitterProgress" Width="40" Height="40"/>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Twitter" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                        <Image Source="Images\twitter.png"  Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+            <Button x:Name="MySpaceButton" Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" Style="{DynamicResource ShareButtonStyle}" VerticalAlignment="Bottom" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=shareGrid, Mode=Default}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2.8, ElementName=MySpaceButton, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=5, ElementName=MySpaceButton, Mode=Default}" Margin="0">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="-130"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <MenuDiskControl:ProgressControl x:Name="MySpaceProgress" Width="40" Height="40"/>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="MySpace" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                        <Image Source="Images\myspace.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </Grid>
+        <Grid x:Name="grid" Width="{Binding ActualWidth, ElementName=LayoutRoot, Mode=Default}" Height="{Binding ActualHeight, ElementName=LayoutRoot, Mode=Default}" RenderTransformOrigin="0.5,0.5" Margin="0">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0" ScaleY="0"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Button Background="#7FC6C8C6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0,0,0,0" x:Name="MenuButton" Style="{DynamicResource CurcularButtonStyle}" Content="Menu" HorizontalAlignment="Center" VerticalAlignment="Center" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2.8, ElementName=grid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2.9, ElementName=grid, Mode=Default}"/>
+            <Button Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" x:Name="CloseButton" Style="{DynamicResource ExteriorTopRightButtonStyle}" VerticalAlignment="Top" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" HorizontalAlignment="Right">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=10, ElementName=grid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=7, ElementName=grid, Mode=Default}">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <TextBlock Text="Close" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <Image Source="Images\close.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                </StackPanel>
+            </Button>
+            <Button Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" x:Name="CopyButton" Style="{DynamicResource ExteriorTopRightButtonStyle}" VerticalAlignment="Bottom" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" HorizontalAlignment="Right">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="-1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=7, ElementName=grid, Mode=Default}" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=10, ElementName=grid, Mode=Default}">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <TextBlock Text="Copy" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <Image Source="Images\copy.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                </StackPanel>
+            </Button>
+            <Button Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" x:Name="EmailButton" Style="{DynamicResource ExteriorTopRightButtonStyle}" VerticalAlignment="Top" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=10, ElementName=grid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=7, ElementName=grid, Mode=Default}">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <TextBlock Text="Email" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <Image Source="Images\email.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                </StackPanel>
+            </Button>
+            <Button Background="#7F95A0A6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Margin="0" x:Name="EditButton" Style="{DynamicResource ExteriorTopRightButtonStyle}" VerticalAlignment="Bottom" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=2, ElementName=LayoutRoot, Mode=Default}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="{Binding ActualWidth, Converter={StaticResource HalfValueConverter}, ConverterParameter=10, ElementName=grid, Mode=Default}" Height="{Binding ActualHeight, Converter={StaticResource HalfValueConverter}, ConverterParameter=7, ElementName=grid, Mode=Default}">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <TextBlock Text="Edit" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    <Image Source="Images\edit.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="32"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+        <Button x:Name="CommandButton" Width="55"  Height="55" Visibility="Visible" Background="#7FC6C8C6" BorderBrush="#7FFFFFFF" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" Style="{DynamicResource CurcularButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Content="Menu">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</UserControl>

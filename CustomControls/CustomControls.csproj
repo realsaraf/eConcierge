@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBACA5C4-D30A-4115-8160-345DFA99791F}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomControls</RootNamespace>
+    <AssemblyName>CustomControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20421.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfoStrat.VE">
+      <HintPath>..\Lib\InfoStrat.VE.dll</HintPath>
+    </Reference>
+    <Reference Include="InfoStrat.VE.NUI">
+      <HintPath>..\Lib\InfoStrat.VE.NUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Lib\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InheritedFrameworkControls\TouchToggleButton.cs" />
+    <Compile Include="InheritedFrameworkControls\iPhoneScrollViewer.cs" />
+    <Compile Include="LandMark\LandMarkDetail.xaml.cs">
+      <DependentUpon>LandMarkDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LandMark\LandMarkItem.xaml.cs">
+      <DependentUpon>LandMarkItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LandMark\LandMarkControl.xaml.cs">
+      <DependentUpon>LandMarkControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TouchCombo\TouchComboBox.xaml.cs">
+      <DependentUpon>TouchComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TouchCombo\TouchComboBoxItem.cs" />
+    <Compile Include="Transportation\MonorailDetail.xaml.cs">
+      <DependentUpon>MonorailDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transportation\TaxiDetail.xaml.cs">
+      <DependentUpon>TaxiDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transportation\TaxiItem.xaml.cs">
+      <DependentUpon>TaxiItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transportation\TransportationDetail.xaml.cs">
+      <DependentUpon>TransportationDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Weather\WeatherDay.xaml.cs">
+      <DependentUpon>WeatherDay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Weather\WeatherDetail.xaml.cs">
+      <DependentUpon>WeatherDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Weather\WeatherElement.cs" />
+    <Page Include="BasicVideoControl\VideoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CalendarControl\CalendarDayItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CalendarControl\TouchCalendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CategoryControl\ComboItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CalendarControl\CalendarEventDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OptionControl\TouchOptionItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CalendarControl\CalendarEventViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CategoryControl\SliderPager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CircularButton\CircularCloseButtonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CircularButton\CircularLockToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CircularButton\CircularToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\DialogViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dining\DiningControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dining\DiningDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dining\DiningSubCateogryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LandMark\LandMarkDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LandMark\LandMarkItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LandMark\LandMarkControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FiveButtonDiskControl\FiveButtonDiskControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MapLocation\LocationRadio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MapLocation\MapDirectionStepControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MapLocation\MapDirectionStepsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapLocation\MapSearchControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\SliderControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TouchCombo\TouchComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transportation\MonorailDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transportation\TaxiDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transportation\TaxiItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transportation\TransportationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transportation\TransportationDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Weather\WeatherControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HotelaccommodationControl\AccommPhoto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HotelExploreControl\HotelExplorer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="BasicVideoControl\VideoControl.xaml.cs">
+      <DependentUpon>VideoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarControl\CalenderButtonState.cs" />
+    <Compile Include="CalendarControl\CalendarDayItem.xaml.cs">
+      <DependentUpon>CalendarDayItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarControl\MonthNameType.cs" />
+    <Compile Include="CalendarControl\RegisterCellEventArgs.cs" />
+    <Compile Include="CalendarControl\TouchCalendar.xaml.cs">
+      <DependentUpon>TouchCalendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryControl\ComboItems.xaml.cs">
+      <DependentUpon>ComboItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarControl\CalendarEventDetail.xaml.cs">
+      <DependentUpon>CalendarEventDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OptionControl\TouchOptionItem.xaml.cs">
+      <DependentUpon>TouchOptionItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarControl\CalendarEventViewer.xaml.cs">
+      <DependentUpon>CalendarEventViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryControl\SliderPager.xaml.cs">
+      <DependentUpon>SliderPager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CircularButton\CircularCloseButtonControl.xaml.cs">
+      <DependentUpon>CircularCloseButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CircularButton\CircularLockToggleButton.xaml.cs">
+      <DependentUpon>CircularLockToggleButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CircularButton\CircularToggleButton.xaml.cs">
+      <DependentUpon>CircularToggleButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\DialogViewer.xaml.cs">
+      <DependentUpon>DialogViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dining\DiningControl.xaml.cs">
+      <DependentUpon>DiningControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dining\DiningDetail.xaml.cs">
+      <DependentUpon>DiningDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dining\DiningSubCateogryControl.xaml.cs">
+      <DependentUpon>DiningSubCateogryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InheritedFrameworkControls\TouchButton.cs" />
+    <Compile Include="InheritedFrameworkControls\TouchComboBox.cs" />
+    <Compile Include="MapControl\RouteService.cs" />
+    <Compile Include="FiveButtonDiskControl\FiveButtonDiskControl.xaml.cs">
+      <DependentUpon>FiveButtonDiskControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapLocation\LocationRadio.xaml.cs">
+      <DependentUpon>LocationRadio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapLocation\MapDirectionStepControl.xaml.cs">
+      <DependentUpon>MapDirectionStepControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapLocation\MapDirectionStepsView.xaml.cs">
+      <DependentUpon>MapDirectionStepsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapLocation\MapSearchControl.xaml.cs">
+      <DependentUpon>MapSearchControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transportation\TransportationControl.xaml.cs">
+      <DependentUpon>TransportationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Weather\WeatherControl.xaml.cs">
+      <DependentUpon>WeatherControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HotelaccommodationControl\AccommPhoto.xaml.cs">
+      <DependentUpon>AccommPhoto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Abstract\AnimatableControl.cs" />
+    <Compile Include="HotelExploreControl\HotelExplorer.xaml.cs">
+      <DependentUpon>HotelExplorer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="HotelVideoControl\HotelVideoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MapControl\MapControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuDiskControl\MenuDiscStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuDiskControl\MenuDiskControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuDiskControl\ProgressControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PictureControl\ClosePictureControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PictureControl\PictureControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\MapStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Weather\WeatherDay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Weather\WeatherDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IAnimatableControl.cs" />
+    <Compile Include="HotelVideoControl\HotelVideoControl.xaml.cs">
+      <DependentUpon>HotelVideoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InheritedFrameworkControls\TouchRadioButton.cs" />
+    <Compile Include="InheritedFrameworkControls\TrackBar.cs" />
+    <Compile Include="MapControl\MapButton.cs" />
+    <Compile Include="MapControl\MapControl.xaml.cs">
+      <DependentUpon>MapControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapControl\VEMapControl.cs" />
+    <Compile Include="MenuDiskControl\MenuDiskControl.xaml.cs">
+      <DependentUpon>MenuDiskControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDiskControl\ProgressControl.xaml.cs">
+      <DependentUpon>ProgressControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PictureControl\ClosePictureControl.xaml.cs">
+      <DependentUpon>ClosePictureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PictureControl\PictureControl.xaml.cs">
+      <DependentUpon>PictureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="CalendarControl\MOUSE DECO.TTF" />
+    <Resource Include="CalendarControl\GILSANUB.TTF" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="MapLocation\NavSetDest.png" />
+    <Resource Include="MapLocation\NavSetOrigin.png" />
+    <Resource Include="TouchCombo\MOUSE DECO.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CircularButton\Images\close.png" />
+    <Resource Include="HotelExploreControl\Images\HotelExterior.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{C954F554-399B-4BAB-9103-5EDBA2A3E241}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global\Controls\WpfKeyboard\WpfKb\WpfKb.csproj">
+      <Project>{0784CDC9-0F52-4B8B-9488-6589C11E94E2}</Project>
+      <Name>WpfKb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global\Controls\WPFMitsuControls\WPFMitsuControls.csproj">
+      <Project>{DBC99C0E-F918-4E3B-B154-C03E212D8ACA}</Project>
+      <Name>WPFMitsuControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global\Helpers\ArtefactAnimator\Artefact.csproj">
+      <Project>{58A3E1B0-FB2A-46CA-BECE-9DF3279A4CB1}</Project>
+      <Name>Artefact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global\Helpers\Helpers\Helpers.csproj">
+      <Project>{250698D5-1429-4CAF-BEB6-3D06AA67C97E}</Project>
+      <Name>Helpers %28Global\Helpers\Helpers%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global\Resources\Themes\Themes.csproj">
+      <Project>{DD3E61F3-2428-4790-BA53-F6F222A2D9DF}</Project>
+      <Name>Themes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrasturcture\Infrasturcture.csproj">
+      <Project>{05B85A9F-E135-4441-AB26-8ACE5BA44A88}</Project>
+      <Name>Infrasturcture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TouchLibrary\TouchHelpers\TouchHelpers.csproj">
+      <Project>{DE517DE0-ABE1-4CC3-AD62-92E4AF10A5EB}</Project>
+      <Name>TouchHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MapLocation\Images\menuButton.png" />
+    <Resource Include="MapLocation\Images\menuButtonPressed.png" />
+    <Resource Include="Weather\Images\icon10.png" />
+    <Resource Include="Weather\Images\icon11.png" />
+    <Resource Include="Weather\Images\icon12.png" />
+    <Resource Include="Weather\Images\icon2.png" />
+    <Resource Include="Weather\Images\icon3.png" />
+    <Resource Include="Weather\Images\icon4.png" />
+    <Resource Include="Weather\Images\icon5.png" />
+    <Resource Include="Weather\Images\icon6.png" />
+    <Resource Include="Weather\Images\icon7.png" />
+    <Resource Include="Weather\Images\icon8.png" />
+    <Resource Include="Weather\Images\icon9.png" />
+    <Resource Include="Weather\Images\rainy.png" />
+    <Resource Include="Transportation\Images\SeeMap.png" />
+    <Resource Include="FiveButtonDiskControl\Images\blueTooth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="FiveButtonDiskControl\Images\print.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="FiveButtonDiskControl\Images\textToPhone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Images\CircularMenuCheckedToggleButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\CircularMenuUnCheckedToggleButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\SeeMap.png" />
+    <Content Include="MapControl\blueMarker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MapControl\orangeMarker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="MenuDiskControl\Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuDiskControl\Images\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuDiskControl\Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuDiskControl\Images\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuDiskControl\Images\facebook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuDiskControl\Images\flickr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuDiskControl\Images\myspace.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuDiskControl\Images\twitter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BasicVideoControl\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HotelaccommodationControl\Images\1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="HotelaccommodationControl\Images\3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="HotelaccommodationControl\Images\2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="HotelaccommodationControl\Images\4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="HotelaccommodationControl\Images\5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="HotelaccommodationControl\Images\6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weather\Images\WeatherO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LandMark\Images\landmarkO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dining\Images\DiningO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Transportation\Images\TransportationO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CircularButton\Images\lockButtonImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="CircularButton\Images\lockButtonLocked.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="FiveButtonDiskControl\Images\close.png" />
+    <Resource Include="FiveButtonDiskControl\Images\greenMarker.png" />
+    <Resource Include="FiveButtonDiskControl\Images\redMarker.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

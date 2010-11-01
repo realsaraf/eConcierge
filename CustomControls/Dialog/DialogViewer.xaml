@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CustomControls.Dialog.DialogViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:InheritedFrameworkControls="clr-namespace:CustomControls.InheritedFrameworkControls" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="GrayBrush" Color="LightGray"/>
+        <ControlTemplate x:Key="CloseButtonControlTemplate" TargetType="{x:Type Button}">
+            <Border BorderBrush="Black" BorderThickness="2" Height="40" Width="40" CornerRadius="40">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#F3F3F3" Offset="0"/>
+                        <GradientStop Color="#EBEBEB" Offset="0.5"/>
+                        <GradientStop Color="#DDDDDD" Offset="0.5"/>
+                        <GradientStop Color="#CDCDCD" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Foreground="Gray" Text="X" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Border CornerRadius="10" BorderThickness="4" BorderBrush="{StaticResource GrayBrush}" Background="White">
+        <Border CornerRadius="10" x:Name="bdrInner" Background="White" BorderThickness="1" BorderBrush="White">
+            <Grid>                
+                <InheritedFrameworkControls:TouchButton x:Name="closeButton" Template="{DynamicResource CloseButtonControlTemplate}" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="-15" Width="40" Height="40"></InheritedFrameworkControls:TouchButton>
+                <ContentControl Margin="15" Content="{Binding DialogContent}" />
+            </Grid>
+        </Border>
+    </Border>
+</UserControl>

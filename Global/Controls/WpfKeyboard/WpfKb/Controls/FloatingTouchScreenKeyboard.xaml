@@ -1,0 +1,52 @@
+﻿<UserControl
+    x:Class="WpfKb.Controls.FloatingTouchScreenKeyboard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:Controls="clr-namespace:WpfKb.Controls"
+    xmlns:Behaviors="clr-namespace:WpfKb.Behaviors"
+    x:Name="keyboard"
+    DataContext="{Binding ElementName=keyboard}">
+    <Grid x:Name="LayoutGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Border
+            x:Name="DragHandle"
+            Grid.Column="0"
+            BorderBrush="LightGray"
+            BorderThickness="10 10 10 5"
+            Background="DarkGray"
+            CornerRadius="10, 10, 0, 0"
+            PreviewMouseDown="DragHandle_PreviewMouseDown"
+            PreviewMouseMove="DragHandle_PreviewMouseMove"
+            PreviewMouseUp="DragHandle_PreviewMouseUp"
+            >
+            <Viewbox>
+                <TextBlock Text="" Style="{DynamicResource Text.Detail}">
+                    <Interactivity:Interaction.Behaviors>
+                        <Behaviors:AutoHideBehavior
+                            ActionWhenClicked="None"
+                            IsAllowedToHide="{Binding IsDragHelperAllowedToHide}"
+                            />
+                    </Interactivity:Interaction.Behaviors>
+                </TextBlock>
+            </Viewbox>
+        </Border>
+        <Border
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Background="LightGray"
+            Padding="10"
+            CornerRadius="0, 10, 10, 10"
+            >
+            <Controls:OnScreenKeyboard
+                AreAnimationsEnabled="{Binding AreAnimationsEnabled}"
+                />
+        </Border>
+    </Grid>
+</UserControl>
